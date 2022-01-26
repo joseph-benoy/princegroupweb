@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    "start": "nodemon index.js"
   },
+  "type": "module",
   "author": "Joseph Benoy - code2break.com",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^14.3.2",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.14.1"
   }
 }
