@@ -1,14 +1,15 @@
-const DataTypes = require("sequelize").DataTypes;
-const _BRANDS = require("./BRANDS");
-const _CATEGORY = require("./CATEGORY");
-const _ITEM = require("./ITEM");
-const _PRODUCT_TYPE = require("./PRODUCT_TYPE");
+import _sequelize from "sequelize";
+const DataTypes = _sequelize.DataTypes;
+import _BRANDS from  "./BRANDS.js";
+import _CATEGORY from  "./CATEGORY.js";
+import _ITEM from  "./ITEM.js";
+import _PRODUCT_TYPE from  "./PRODUCT_TYPE.js";
 
-function initModels(sequelize) {
-  const BRANDS = _BRANDS(sequelize, DataTypes);
-  const CATEGORY = _CATEGORY(sequelize, DataTypes);
-  const ITEM = _ITEM(sequelize, DataTypes);
-  const PRODUCT_TYPE = _PRODUCT_TYPE(sequelize, DataTypes);
+export default function initModels(sequelize) {
+  const BRANDS = _BRANDS.init(sequelize, DataTypes);
+  const CATEGORY = _CATEGORY.init(sequelize, DataTypes);
+  const ITEM = _ITEM.init(sequelize, DataTypes);
+  const PRODUCT_TYPE = _PRODUCT_TYPE.init(sequelize, DataTypes);
 
   ITEM.belongsTo(BRANDS, { as: "BRAND", foreignKey: "BRAND_ID"});
   BRANDS.hasMany(ITEM, { as: "ITEMs", foreignKey: "BRAND_ID"});
@@ -24,6 +25,3 @@ function initModels(sequelize) {
     PRODUCT_TYPE,
   };
 }
-module.exports = initModels;
-module.exports.initModels = initModels;
-module.exports.default = initModels;

@@ -1,9 +1,7 @@
-const Sequelize = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  return ITEM.init(sequelize, DataTypes);
-}
+import _sequelize from 'sequelize';
+const { Model, Sequelize } = _sequelize;
 
-class ITEM extends Sequelize.Model {
+export default class ITEM extends Model {
   static init(sequelize, DataTypes) {
   return super.init({
     ID: {

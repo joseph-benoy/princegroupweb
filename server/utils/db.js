@@ -1,4 +1,8 @@
 import  Sequelize from "sequelize";
+import initModels from "../models/init-models";
+
+
+
 
 const sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -9,4 +13,11 @@ const sequelize = new Sequelize(
     }
 );
 
-export default sequelize;
+try{
+    const models = initModels(sequelize);
+}
+catch(e){
+    console.log(e);
+}
+
+export default models;
