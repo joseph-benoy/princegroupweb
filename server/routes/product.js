@@ -1,5 +1,5 @@
 import express from "express";
-import { addProduct, addProductItem, allProduct, productByCategory } from "../controllers/product.controller.js";
+import { addProduct, addProductItem, allProduct, productByCategory, productByName,productById } from "../controllers/product.controller.js";
 import { validateToken } from "../middlewares/jwt.js";
 import { ItemUpload } from "../middlewares/multerUpload.js";
 
@@ -11,5 +11,8 @@ router
 .get("/all",allProduct)
 .post("/item/new",[validateToken,ItemUpload.single('image')],addProductItem)
 .post("/item/category",productByCategory)
+.post("/item/name",productByName)
+.post("/item/id",productById)
+
 
 export {router as ProductRouter}

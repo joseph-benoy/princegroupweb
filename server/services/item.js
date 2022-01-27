@@ -22,3 +22,19 @@ export const getProductsByCategory = async(cat)=>{
     })
     return result;
 }
+export const getProductByName = async(name)=>{
+    const result = await models.ITEM.findOne({
+        where:{
+            NAME:name
+        }
+    })
+    return result;
+}
+export const getProductById =  async(id)=>{
+    const result = await models.ITEM.findOne({
+        where:{
+            ID:id
+        }
+    })
+    return result;
+}
