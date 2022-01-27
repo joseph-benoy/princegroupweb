@@ -7,3 +7,11 @@ export const insertProduct = (productName,categoryId)=>{
     })
     return result;
 }
+export const listAllProducts = async()=>{
+    try{
+        return await models.PRODUCT_TYPE.findAll();
+    }
+    catch(e){
+        return e;
+    }
+}
