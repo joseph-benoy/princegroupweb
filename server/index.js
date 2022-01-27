@@ -1,6 +1,7 @@
 import express from "express";
 import 'dotenv/config'
 import { CategoryRouter } from "./routes/category.routes.js";
+import { ProductRouter } from "./routes/product.js";
 
 
 const app = express();
@@ -9,7 +10,7 @@ app.use(express.urlencoded({
 }));
 
 app.use("/category",CategoryRouter);
-
+app.use("/product",ProductRouter);
 app.get("/",(req,res)=>{
     res.json({
         status:"success"
