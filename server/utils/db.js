@@ -1,5 +1,5 @@
 import  Sequelize from "sequelize";
-import initModels from "../models/init-models";
+import initModels from "../models/init-models.js";
 
 
 
@@ -12,12 +12,6 @@ const sequelize = new Sequelize(
         dialect:"mysql"
     }
 );
-
-try{
-    const models = initModels(sequelize);
-}
-catch(e){
-    console.log(e);
-}
+const models = initModels(sequelize);
 
 export default models;
