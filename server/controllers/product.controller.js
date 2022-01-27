@@ -1,4 +1,5 @@
 import { insertCategory,listAllCategories } from "../services/category.table.js";
+import { insertProductItem } from "../services/item.js";
 import { insertProduct,listAllProducts } from "../services/product.js";
 export const addCategory = (req,res)=>{
     const result = insertCategory(req.body.categoryName,req.file.filename);
@@ -20,4 +21,8 @@ export const addProduct = (req,res)=>{
 export const allProduct = async (req,res)=>{
     const result  = await listAllProducts();
     return res.json(result);
+}
+export const addProductItem = (req,res)=>{
+    const result = insertProductItem({...req.body,filename:req.file.filename})
+    return res.json(result)
 }
