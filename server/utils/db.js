@@ -4,7 +4,7 @@ import initModels from "../models/init-models.js";
 
 
 
-const sequelize = new Sequelize(
+export const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,{
@@ -13,5 +13,7 @@ const sequelize = new Sequelize(
     }
 );
 const models = initModels(sequelize);
+
+
 
 export default models;
