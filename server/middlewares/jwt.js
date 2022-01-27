@@ -1,4 +1,5 @@
-import { sign,verify,decode } from "jsonwebtoken";
+import pkg from 'jsonwebtoken';
+const { sign,verify,decode } = pkg;
 import 'dotenv/config'
 
 const secret = process.env.JWT_CODE;
@@ -9,7 +10,6 @@ export const createToken = (payload)=>{
 
 export const validateToken = (req,res,next)=>{
     const accessToken = req.cookies['access-token'];
-    const accessToken =  req.cookies['access-token'];
     if(!accessToken){
         return res.status(400).json({error:"user not authenticated"});
     }
@@ -18,13 +18,13 @@ export const validateToken = (req,res,next)=>{
             const payload = verify(accessToken,secret);
             if(payload){
                 req.authenticated = true;
-                req.username = payload.username;
+                req.username = payload.email;
                 req.id = payload.id;
                 return next();
             }
         }
         catch(err){
-            res.status(400).json({error:err});
+            return res.status(400).json({error:"wrong access token"});
         }
     }
 }

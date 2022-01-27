@@ -9,8 +9,13 @@ export const allCategories = async(req,res)=>{
     return res.json(result);
 }
 export const addProduct = (req,res)=>{
-    const result = insertProduct(req.body.name,req.body.cid)
-    return res.json(result);
+    try{
+        const result = insertProduct(req.body.name,req.body.cid)
+        return res.json(result);
+    }
+    catch(e){
+        return res.status(500).json(e)
+    }
 }
 export const allProduct = async (req,res)=>{
     const result  = await listAllProducts();
