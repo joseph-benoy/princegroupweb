@@ -5,6 +5,6 @@ export const insertCategory = (categoryName,iconName)=>{
         ICON_PATH:iconName
     })
 }
-export const listAllCategories = ()=>{
-    return models.CATEGORY.findAll();
+export const listAllCategories = async()=>{
+    return await models.CATEGORY.findAll();
 }
