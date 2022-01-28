@@ -1,8 +1,15 @@
 import {Navbar,Container,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap';
 import NavList from '../navList/navlist';
+import "./header.css"
+import { useNavigate } from "react-router-dom";
+import { useCallback } from 'react';
 const Header = () => {
+  const nav = useNavigate();
+  const changePage = useCallback((path)=>{
+    nav(path);
+  },[])
     return ( 
-        <Navbar bg="light" expand="lg" sticky="top">
+        <Navbar bg="dark" expand="lg" sticky="top" variant="dark">
   <Container fluid>
     <Navbar.Brand href="#">Pet shop</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -12,11 +19,11 @@ const Header = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">About</Nav.Link>
+        <Nav.Link onClick={()=>{changePage("home")}}>Home</Nav.Link>
+        <Nav.Link onClick={()=>{changePage("about")}}>About</Nav.Link>
         <NavList/>
-        <Nav.Link href="#action2">Services</Nav.Link>
-        <Nav.Link href="#action2">Contact</Nav.Link>
+        <Nav.Link onClick={()=>{changePage("services")}}>Services</Nav.Link>
+        <Nav.Link onClick={()=>{changePage("contact")}}>Contact</Nav.Link>
       </Nav>
       <Form className="d-flex">
         <FormControl
@@ -25,7 +32,7 @@ const Header = () => {
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button variant="danger">Search</Button>
       </Form>
     </Navbar.Collapse>
   </Container>

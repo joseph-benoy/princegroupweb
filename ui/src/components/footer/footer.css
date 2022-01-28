@@ -1,0 +1,43 @@
+#fb{
+    color: #4267B2;
+}
+#tw{
+    color: #1DA1F2;
+}
+#ytb{
+    color: #FF0000;
+}
+#insta{
+    color: #bc2a8d ;
+}
+.footer{
+    background-color: #212529;
+    color: white;
+    height: 15rem !important;
+    margin-top: 5rem !important;
+    padding: 3rem 3rem;
+}
+.footer-head h6{
+    font-size: 2rem;
+}
+.footer-contact h6{
+    font-size: 1.4rem;
+}
+.footer-social a{
+    font-size: 2rem;
+    margin-right: 1rem !important;
+}
+.footer-social h6{
+    font-size: 1.4rem;
+}
+#footer-divider{
+    background-color: white;
+    height: 0.1rem;
+    width: 88vw;
+    margin-top: 2rem !important;
+}
+#copyright{
+    margin-top: 1rem !important;
+    text-align: center;
+}
+

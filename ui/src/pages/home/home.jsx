@@ -1,15 +1,11 @@
 import { Container,Row,Col } from "react-bootstrap";
-import Header from "../../components/Header/Header";
 import SideNav from "../../components/sideNav/sidenav";
 import Slider1 from "../../components/slider1/slider1";
 import Slider2 from "../../components/slider2/slider2";
-
 const Home = () => {
     return ( 
         <>
-            <header>
-                <Header/>
-            </header>
+
             <Container fluid>
                 <Row>
                     <Col lg={2}>
@@ -23,6 +19,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
+
         </>
      );
 }
