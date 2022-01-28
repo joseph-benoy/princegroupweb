@@ -28,6 +28,10 @@ export const getMenu = async()=>{
             item.CATEGORY
         ))
         cats = [...new Set(cats)];
+        var icons = data.map((item)=>(
+            item.ICON
+        ))
+        icons = [...new Set(icons)]
         var subcats = [];
         var subCount = 0;
         for(let cat of cats){
@@ -61,7 +65,8 @@ export const getMenu = async()=>{
         var i=0;
         menu = sb.map((item)=>(
             {
-                main:cats[i++],
+                main:cats[i],
+                icon:icons[i++],
                 sub:item
             }
         ))
