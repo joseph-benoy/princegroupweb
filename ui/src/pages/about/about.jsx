@@ -1,7 +1,13 @@
 import { Container,Row,Col } from "react-bootstrap";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/Header/Header";
 
 const About = () => {
     return ( 
+        <>
+        <header>
+            <Header/>
+        </header>
         <Container fluid>
             <Row>
                 <Col>
@@ -9,6 +15,8 @@ const About = () => {
                 </Col>
             </Row>
         </Container>
+        <Footer/>
+        </>
      );
 }
  

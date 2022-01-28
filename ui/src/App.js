@@ -8,21 +8,19 @@ import Footer from "./components/footer/footer"
 import About from './pages/about/about';
 import Services from './pages/services/services';
 import Contact from './pages/contact/contact';
+import Admin from './pages/admin/admin';
 function App() {
   return (
     <Router>
     <div className="App">
-      <header>
-        <Header/>
-      </header>
           <Routes>
-            <Route path="/" element={<Home/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/services" element={<Services/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
           </Routes>
-        <Footer/>
     </div>
     </Router>
 
