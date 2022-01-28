@@ -5,6 +5,7 @@ import { ProductRouter } from "./routes/product.js";
 import { AdminRouter } from "./routes/admin.js";
 import cookieParser from "cookie-parser";
 import cors from 'cors';
+import { SliderRouter } from "./routes/slider.js";
 
 const app = express();
 app.use(express.urlencoded({
@@ -16,6 +17,7 @@ app.use(cors())
 app.use("/api/category",CategoryRouter);
 app.use("/api/product",ProductRouter);
 app.use("/api/admin",AdminRouter);
+app.use("/api/slider",SliderRouter);
 app.get("/",(req,res)=>{
     res.json({
         status:"success"

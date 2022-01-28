@@ -2,6 +2,7 @@
     border: 0.5px solid rgba(0,0,0,0.2);
     margin-top: 2rem !important;
     padding: 1rem 0rem;
+    border-radius: 5px;
 }
 .sidebar .nav-link{
     color: black;
