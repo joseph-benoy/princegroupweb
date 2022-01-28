@@ -1,9 +1,10 @@
-import { Container,Nav,Form,Button,NavDropdown,FormControl ,Navbar} from 'react-bootstrap';
-const NavbarTop = () => {
+import {Navbar,Container,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap';
+import NavList from '../navList/navlist';
+const Header = () => {
     return ( 
-        <Navbar bg="light" expand="lg" sticky='top' >
+        <Navbar bg="light" expand="lg" sticky="top">
   <Container fluid>
-    <Navbar.Brand href="#">Pets shop</Navbar.Brand>
+    <Navbar.Brand href="#">Pet shop</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -13,14 +14,7 @@ const NavbarTop = () => {
       >
         <Nav.Link href="#action1">Home</Nav.Link>
         <Nav.Link href="#action2">About</Nav.Link>
-        <NavDropdown title="Products" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
-        </NavDropdown>
+        <NavList/>
         <Nav.Link href="#action2">Services</Nav.Link>
         <Nav.Link href="#action2">Contact</Nav.Link>
       </Nav>
@@ -39,4 +33,4 @@ const NavbarTop = () => {
      );
 }
  
-export default NavbarTop;
+export default Header;
