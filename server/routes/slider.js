@@ -7,7 +7,7 @@ const router = express.Router();
 
 router
 .post("/1/new",[validateToken,slider1Upload.single('slider1')],putSlider1)
-.post("/2/new",[validateToken,slider1Upload.single('slider2')],putSlider2)
+.post("/2/new",[validateToken,slider2Upload.single('slider2')],putSlider2)
 .get("/1/all",getSliderA)
 .get("/2/all",getSliderB)
 

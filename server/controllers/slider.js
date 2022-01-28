@@ -1,4 +1,4 @@
-import { getSlider1, getSlider2, slider1, slider2 } from "../services/slider"
+import { getSlider1, getSlider2, slider1, slider2 } from "../services/slider.js"
 
 export const getSliderA = async(req,res)=>{
     const result = await getSlider1();
