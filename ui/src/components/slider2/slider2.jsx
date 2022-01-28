@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import axios from "axios";
-import "./slider.css"
-const Slider1 = () => {
+const Slider2 = () => {
   const [images,setImages] = useState([]);
   useEffect(()=>{
     const fetchData = async()=>{
-      const res = await axios.get("/api/slider/1/all")
+      const res = await axios.get("/api/slider/2/all")
       setImages(res.data)
       console.log(res.data)
     }
@@ -20,7 +19,7 @@ const Slider1 = () => {
               <Carousel.Item>
               <img
                 className="d-block w-100 slider-img"
-                src={"/static/slider1/"+item.IMG_PATH}
+                src={"/static/slider2/"+item.IMG_PATH}
                 alt="First slide"
               />
             </Carousel.Item>
@@ -30,4 +29,4 @@ const Slider1 = () => {
      );
 }
  
-export default Slider1;
+export default Slider2;

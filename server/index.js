@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(cors())
-app.use("static",express.static("uploads"))
+app.use("/static",express.static("uploads"))
 app.use("/api/category",CategoryRouter);
 app.use("/api/product",ProductRouter);
 app.use("/api/admin",AdminRouter);
