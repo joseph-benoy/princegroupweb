@@ -15,3 +15,11 @@ export const listAllProducts = async()=>{
         return e;
     }
 }
+export const getMen = async()=>{
+    try{
+        
+    }
+    catch(e){
+        return e;
+    }
+}

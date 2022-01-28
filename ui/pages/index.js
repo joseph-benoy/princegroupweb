@@ -19,7 +19,7 @@ export default function Home() {
     <NavbarTop/>
     <Row>
       <Col lg={2}>
-          <SideNav/>
+          <SideNav className={styles.sidenav} />
       </Col>
       <Col lg={5}>
         <HomeSlider/>

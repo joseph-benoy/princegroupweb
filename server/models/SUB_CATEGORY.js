@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class PRODUCT_TYPE extends Model {
+export default class SUB_CATEGORY extends Model {
   static init(sequelize, DataTypes) {
   return super.init({
     ID: {
@@ -11,20 +11,21 @@ export default class PRODUCT_TYPE extends Model {
       primaryKey: true
     },
     NAME: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      type: DataTypes.STRING(70),
+      allowNull: false,
+      unique: "NAME"
     },
-    SUBCAT_ID: {
+    CATEGORY_ID: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'SUB_CATEGORY',
+        model: 'CATEGORY',
         key: 'ID'
       }
     }
   }, {
     sequelize,
-    tableName: 'PRODUCT_TYPE',
+    tableName: 'SUB_CATEGORY',
     timestamps: false,
     indexes: [
       {
@@ -36,10 +37,18 @@ export default class PRODUCT_TYPE extends Model {
         ]
       },
       {
-        name: "SUBCAT_ID",
+        name: "NAME",
+        unique: true,
         using: "BTREE",
         fields: [
-          { name: "SUBCAT_ID" },
+          { name: "NAME" },
+        ]
+      },
+      {
+        name: "CATEGORY_ID",
+        using: "BTREE",
+        fields: [
+          { name: "CATEGORY_ID" },
         ]
       },
     ]
