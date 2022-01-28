@@ -1,0 +1,17 @@
+.sidebar{
+    border: 0.5px solid rgba(0,0,0,0.2);
+    margin-top: 2rem !important;
+    padding: 1rem 0rem;
+}
+.sidebar .nav-link{
+    color: black;
+    border-bottom: 0.5px solid rgba(0,0,0,0.2) !important;
+    border-top: 0.5px solid rgba(0,0,0,0.2) !important;
+}
+.sidebar .nav-link:hover{
+    color: white ;
+    background-color: blueviolet;
+}
+.sidebar h4{
+    text-align: center !important;
+}
