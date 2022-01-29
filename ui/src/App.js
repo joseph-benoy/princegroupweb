@@ -10,6 +10,7 @@ import Services from './pages/services/services';
 import Contact from './pages/contact/contact';
 import Admin from './pages/admin/admin';
 import Dash from './pages/dash/dash';
+import Product from './pages/product/product';
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About/>}></Route>
             <Route path="/services" element={<Services/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
+            <Route path="/product" element={<Product/>}></Route>
           </Routes>
     </div>
     </Router>
