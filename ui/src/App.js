@@ -9,6 +9,7 @@ import About from './pages/about/about';
 import Services from './pages/services/services';
 import Contact from './pages/contact/contact';
 import Admin from './pages/admin/admin';
+import Dash from './pages/dash/dash';
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
           <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/admin" element={<Admin/>}></Route>
+          <Route path="/admin/dashboard" element={<Dash/>}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/services" element={<Services/>}></Route>

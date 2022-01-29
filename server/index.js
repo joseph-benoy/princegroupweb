@@ -12,7 +12,9 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(cookieParser());
-app.use(cors())
+app.use(cors({
+    origin:"*"
+}))
 app.use("/static",express.static("uploads"))
 app.use("/api/category",CategoryRouter);
 app.use("/api/product",ProductRouter);

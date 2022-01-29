@@ -7,3 +7,9 @@
 #home-link-admin{
     margin-left: 85vw !important;
 }
+#login-alert{
+    width: 25% !important;
+    text-align: center;
+    margin-left: 30rem !important;
+    margin-top: 5rem !important;
+}
