@@ -1,0 +1,76 @@
+.social-top{
+    color: grey !important;
+    font-size: 1.5rem;
+    margin-right: 1rem !important;
+}
+#top-social{
+    margin-left: 13rem !important;
+}
+.top-main{
+    padding: 1.5rem 5rem !important;
+    border-bottom: 1.5px solid rgba(0,0,0,0.1);
+    font-family: var(--bFont) !important;
+    overflow: hidden;
+}
+.top-main p{
+    font-size: 1.1rem !important;
+}
+#searchBtn{
+    background-color: var(--btnColor);
+    border: none !important;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.1rem 0.5rem;
+}
+#search-top{
+    padding: 0.3rem 1rem ;
+}
+form.example input[type=text] {
+    padding: 7px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: white;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 7px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  @media only screen and (max-width: 786px) {
+    .top-main{
+        padding: 1rem  !important;
+        padding-right: 2.2rem !important;
+    }
+    #top-social{
+        margin-left: 1.7rem !important;
+        text-align: center;
+    }
+    #top-social a{
+        margin-right: 2.5rem !important;
+    }
+    .example{
+        margin: 1rem 0rem !important;
+    }
+    .top-main p{
+        text-align: center;
+    }
+  }

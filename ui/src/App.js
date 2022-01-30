@@ -2,15 +2,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/home/home';
 import "react-bootstrap-submenu/dist/index.css";
-import {BrowserRouter as Router,Route,Routes,useNavigate} from 'react-router-dom';
-import Header from "./components/Header/Header"
-import Footer from "./components/footer/footer"
-import About from './pages/about/about';
-import Services from './pages/services/services';
-import Contact from './pages/contact/contact';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Admin from './pages/admin/admin';
 import Dash from './pages/dash/dash';
-import Product from './pages/product/product';
 function App() {
   return (
     <Router>

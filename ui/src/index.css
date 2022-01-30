@@ -9,6 +9,9 @@
 :root{
   --dark:#212529;
   --red:#dc3545;
+  --hFont:'Fredoka One', cursive;
+  --bFont:'Titillium Web', sans-serif;
+  --btnColor:#259cd8;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -24,4 +27,7 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--red); 
+}
+body{
+  background-color: white !important;
 }
