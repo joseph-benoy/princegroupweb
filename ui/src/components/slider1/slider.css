@@ -4,4 +4,6 @@
 .slider{
     height: 30rem !important;
     overflow: hidden !important;
+    width: 100% !important;
+    margin-left: 0.75rem !important;
 }

@@ -16,6 +16,11 @@ const SideNav = () => {
                     <Nav.Link href={cat.main}><img className="drop-icon" src={"static/category_icons/"+cat.icon}/>&nbsp;&nbsp;&nbsp;{cat.main}</Nav.Link>
                 ))
             }
+            <Nav.Link href=""><img className="drop-icon" src={"https://img.icons8.com/fluency/344/fish.png"}/>&nbsp;&nbsp;&nbsp;Fish & Aquarium</Nav.Link>
+            <Nav.Link href=""><img className="drop-icon" src={"https://img.icons8.com/fluency/344/bird.png"}/>&nbsp;&nbsp;&nbsp;Bird & Poultry</Nav.Link>
+            <Nav.Link href=""><img className="drop-icon" src={"https://img.icons8.com/fluency/344/rabbit.png"}/>&nbsp;&nbsp;&nbsp;Rabbit & Small pets</Nav.Link>
+            <Nav.Link href=""><img className="drop-icon" src={"https://img.icons8.com/fluency/344/lizard.png"}/>&nbsp;&nbsp;&nbsp;Reptiles</Nav.Link>
+            <Nav.Link href=""><img className="drop-icon" src={"https://img.icons8.com/cotton/344/cactus.png"}/>&nbsp;&nbsp;&nbsp;Cactus & Tiny garden</Nav.Link>
         </Nav>
      );
 }
