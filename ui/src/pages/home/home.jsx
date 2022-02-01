@@ -4,6 +4,9 @@ import SideNav from "../../components/sideNav/sidenav";
 import Slider1 from "../../components/slider1/slider1";
 import Header from "../../components/Header/Header";
 import "./home.css"
+import About from "./about/about";
+import Offer from "./offer/offer";
+import oimg1 from "../../images/offer/offer8.jpg"
 const Home = () => {
     return ( 
         <>
@@ -18,6 +21,14 @@ const Home = () => {
                     <Col lg={10}>
                         <Slider1/>
                     </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <About/>
+                    </Col>
+                </Row>
+                <Row>
+                    <Offer img={oimg1}/>
                 </Row>
             </Container>
             <Footer/>

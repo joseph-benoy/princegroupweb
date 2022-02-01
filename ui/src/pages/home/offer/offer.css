@@ -1,0 +1,10 @@
+.offer-img{
+    width: 80% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transition: 0.5s all ease-in-out;
+}
+.offer-img:hover {
+    transform: scale(1.1);
+}

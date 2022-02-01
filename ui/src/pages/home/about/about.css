@@ -1,0 +1,15 @@
+.about-img{
+    width: 15rem !important;}
+.about-text{
+    padding: 3rem;
+    font-family: var(--hFont);
+    text-align: center;
+    margin-left: 5rem !important;
+}
+.about-wrapper{
+    padding: 5rem !important;
+    margin-left: -1rem !important;
+}
+.about-text h3{
+    margin-bottom: 1rem !important;
+}
