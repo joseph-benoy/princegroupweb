@@ -7,6 +7,7 @@ import "./home.css"
 import About from "./about/about";
 import Offer from "./offer/offer";
 import oimg1 from "../../images/offer/offer8.jpg"
+import Services from "./services/services";
 const Home = () => {
     return ( 
         <>
@@ -29,6 +30,9 @@ const Home = () => {
                 </Row>
                 <Row>
                     <Offer img={oimg1}/>
+                </Row>
+                <Row>
+                    <Services/>
                 </Row>
             </Container>
             <Footer/>

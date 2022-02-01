@@ -1,0 +1,15 @@
+.service-box{
+    font-family: var(--hFont);
+    text-align: center;
+    padding: 3rem 1rem;
+    width: 80%;
+    margin-left: 2rem !important;
+}
+.service-box img{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.services-wrapper{
+    margin-top: 5rem !important;
+}
