@@ -58,6 +58,8 @@ blockquote p {
 
 #pt {
   padding-top: 75px !important;
+  padding-left: 5rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .single-offer-box {
@@ -81,7 +83,7 @@ blockquote p {
   margin-bottom: 2rem !important;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 786px) {
   .car-item {
     padding: 0;
     font-weight: 400;
@@ -104,5 +106,10 @@ blockquote p {
     margin-top: 1rem !important;
     margin-bottom: 2rem !important;
   }
-
+  #pt {
+    padding-top: 75px !important;
+    padding-left: 0rem !important;
+    margin-bottom: 0em !important;
+  }
+  
 }

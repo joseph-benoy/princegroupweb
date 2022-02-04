@@ -8,7 +8,23 @@
     width: 100% !important;
     margin-left: 0.75rem !important;
 }
-
+.carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 55%;
+}
+.slider-h{
+    font-family: var(--hFont);
+    font-size: 3.5rem !important;
+    text-align: left;
+}
+.slider-p{
+    font-family: var(--bFont);
+    font-size: 1.5rem !important;
+    text-align: left;
+}.slider-btn{
+    transform: translateX(-350%);
+}
 @media (max-width: 992px) {
     .home-content {
         width: 100% !important;

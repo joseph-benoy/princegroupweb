@@ -11,8 +11,10 @@
     margin-right: auto !important;
 }
 .services-wrapper{
-    margin-top: 3rem !important;
+    margin-top: 0rem !important;
     padding: 5rem;
+    padding-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 
