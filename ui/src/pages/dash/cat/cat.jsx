@@ -1,11 +1,12 @@
 import { useState } from "react";
-import {Button, Col, Container, Row,Modal} from "react-bootstrap";
+import {Button, Col, Container, Row,Modal,Form} from "react-bootstrap";
 import "./category.css"
 const Cat = () => {
     const [sacat,setSacat] = useState(false);
     const [ssub,setSsub] = useState(false);
     const [stype,setStype] = useState(false);
     const [sb,setSb] = useState(false);
+    const []
     return ( 
         <>
             <section className="category-tab">
@@ -14,9 +15,16 @@ const Cat = () => {
                 <Modal.Title>Add category</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-
-
-
+                <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Categry name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter name" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Categry Icon</Form.Label>
+                        <Form.Control type="file" accept="image/*" placeholder="Enter icon" />
+                    </Form.Group>
+                </Form>
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={()=>{setSacat(!sacat)}}>
