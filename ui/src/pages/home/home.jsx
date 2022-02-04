@@ -29,6 +29,9 @@ const Home = () => {
                         <About/>
                     </Col>
                 </Row>
+                {/* <Row>
+                    <Product />
+                </Row> */}
                 <Row>
                     <Services/>
                 </Row>

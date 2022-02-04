@@ -1,6 +1,7 @@
 import "./dash.css"
 import {Container,Navbar,Nav,Tabs,Tab,Row,Col} from 'react-bootstrap';
 import Product from "./product/product";
+import Cat from "./cat/cat";
 const Dash = () => {
     return ( 
         <>
@@ -26,10 +27,7 @@ const Dash = () => {
                                 <Product/>
                             </Tab>
                             <Tab eventKey="category" title="Category">
-                                <h1>category</h1>
-                            </Tab>
-                            <Tab eventKey="settings" title="Settings" >
-                                <h1>settings</h1>
+                                <Cat/>
                             </Tab>
                         </Tabs>
                         </Col>

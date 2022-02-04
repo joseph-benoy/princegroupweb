@@ -1,5 +1,6 @@
 .slider-img{
     height: 30rem !important;
+    object-fit: fill !important
 }
 .slider{
     height: 30rem !important;
@@ -7,3 +8,32 @@
     width: 100% !important;
     margin-left: 0.75rem !important;
 }
+
+@media (max-width: 992px) {
+    .home-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .slider {
+        margin-left: 0!important;
+    }
+    
+    .slider-img{
+        height: 30rem !important;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .slider-img{
+        height: 20rem !important;
+    }
+}
+
+/* @media (max-width: 321px) {
+    .slider-img{
+        height: 16rem !important;
+    }
+} */

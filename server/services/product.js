@@ -76,3 +76,16 @@ export const getMenu = async()=>{
         return e;
     }
 }
+
+export const addProductType = (name,sid)=>{
+    return models.PRODUCT_TYPE.create({
+        NAME:name,
+        SUBCAT_ID:sid
+    })
+}
+
+export const addBrand= (name)=>{
+    return models.BRANDS.create({
+        NAME:name
+    })
+}

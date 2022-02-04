@@ -2,7 +2,7 @@
     font-family: var(--hFont);
     text-align: center;
     padding: 3rem 1rem;
-    width: 80%;
+    width: 87%;
     margin-left: 2rem !important;
 }
 .service-box img{
@@ -13,4 +13,30 @@
 .services-wrapper{
     margin-top: 3rem !important;
     padding: 5rem;
+}
+
+
+@media (max-width: 800px) {
+
+    .service-row {
+        flex:50%;
+    }
+
+    .service-box {
+        margin-bottom: 3rem !important;
+        padding: 3rem 0rem;
+        margin-left: 2rem ;
+    }
+}
+
+@media (max-width: 992px) {
+    .service-box {
+        margin-bottom: 3rem !important;
+        padding: 3rem 0rem;
+        margin-left: 0rem;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
 }

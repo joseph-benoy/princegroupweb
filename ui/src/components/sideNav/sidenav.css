@@ -2,6 +2,7 @@
     font-family: var(--hFont);
     text-align: center !important;
     margin-bottom: 1rem !important;
+    /* font-size: */
 }
 .sidebar{
     padding: 2rem 0rem !important;
@@ -10,4 +11,5 @@
     font-family: var(--bFont) !important;
     font-weight: bold;
     color: rgba(0,0,0,0.7);
+    font-size: 14px !important;
 }

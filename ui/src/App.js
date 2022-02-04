@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Admin from './pages/admin/admin';
 import Dash from './pages/dash/dash';
 import ScrollToTop from "react-scroll-to-top";
+import Shop from './pages/shopProduct/shop';
 function App() {
   return (
     <Router>
@@ -15,7 +16,10 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/admin" element={<Admin/>}></Route>
           <Route path="/admin/dashboard" element={<Dash/>}></Route>
-            <Route path="/home" element={<Home/>}></Route>
+          <Route path="/home" element={<Home/>}></Route>
+
+          
+          <Route path="/shop" element={<Shop/>}></Route>
           </Routes>
     </div>
     </Router>

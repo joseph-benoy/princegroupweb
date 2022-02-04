@@ -8,7 +8,7 @@ import "./services.css"
 const Services = () => {
     return ( 
         <Container className="services-wrapper">
-            <Row>
+            <Row  className="service-row">
                 <Col lg={3}>
                     <div className="service-box" style={{backgroundColor:"#bfebff"}}>
                         <img src={i1}/>

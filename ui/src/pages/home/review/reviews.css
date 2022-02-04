@@ -1,3 +1,11 @@
+:root {
+  --transition: .5s;
+}
+
+#car-usel {
+  padding: 10px;
+}
+
 .car-item{
     font-family: var(--bFont);
     font-weight: bold;
@@ -6,10 +14,12 @@
 .review-wrapper{
     text-align: center;
     font-family: var(--hFont);
+    padding-top: 75px;
 }
 .review-wrapper h2{
     font-size: 2.3rem;
     margin-bottom: 2rem !important;
+    margin-top: 1rem !important;
 }
 .review-video{
     width: 100%;
@@ -39,4 +49,60 @@ blockquote:after {
 }
 blockquote p {
   display: inline;
+}
+
+
+#player{
+  margin-top: 1rem !important;
+}
+
+#pt {
+  padding-top: 75px !important;
+}
+
+.single-offer-box {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.single-offer-box img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-offer-box:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.d-block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem !important;
+}
+
+@media (max-width: 426px) {
+  .car-item {
+    padding: 0;
+    font-weight: 400;
+    text-align: center;
+  }
+  .review-wrapper h2{
+    font-size: 1.4rem;
+  }
+
+  #player{
+    padding-top: 2rem;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;  
+  }
+
+  .d-block img{
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
 }

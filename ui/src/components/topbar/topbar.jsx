@@ -1,6 +1,6 @@
 import { Col, Container,Row } from "react-bootstrap";
-import {Facebook, Twitter, Youtube, Instagram,Search} from 'react-bootstrap-icons'
-import "./topbar.css"
+import {Facebook, Twitter, Youtube, Instagram,Search} from 'react-bootstrap-icons';
+import "./topbar.css";
 
 const Topbar = () => {
     return ( 

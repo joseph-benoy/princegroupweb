@@ -8,3 +8,10 @@ export const insertCategory = (categoryName,iconName)=>{
 export const listAllCategories = async()=>{
     return await models.CATEGORY.findAll();
 }
+
+export const addSub = (name,cid)=>{
+    return models.SUB_CATEGORY.create({
+        NAME:name,
+        CATEGORY_ID:cid
+    })
+}
