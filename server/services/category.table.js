@@ -33,3 +33,13 @@ export const listSub = async(cid)=>{
         return e;
     }
 }
+
+export const listBrands = async()=>{
+    try{
+       
+        return await models.BRANDS.findAll();
+    }
+    catch(e){
+        return e;
+    }
+}

@@ -14,10 +14,13 @@ const Add = ({show,handleClose}) => {
     const [sub,setSub] = useState()
     const [catList,setCatList] = useState([])
     const [subList,setSubList] = useState([])
+    const [brandList,setBrandList] = useState([])
     useState(()=>{
         (async()=>{
             let res = await axios.get("/api/category/all");
             setCatList(res.data);
+            let res1 = await axios.get("/api/category/allbrands");
+            setBrandList(res1.data);
         })()
     },[])
     const loadSub = (e)=>{
@@ -91,7 +94,11 @@ const Add = ({show,handleClose}) => {
             <Form.Group className="mb-3">
                 <Form.Label>Brand</Form.Label>
                 <Form.Select>
-                <option></option>
+                {
+                    brandList.map((item)=>(
+                        <option value={item.ID}>{item.NAME}</option>
+                    ))
+                }
                 </Form.Select>
             </Form.Group>
             </Form>

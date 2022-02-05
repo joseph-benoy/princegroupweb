@@ -1,5 +1,5 @@
 import express from "express";
-import { addCategory,addNewBrand,addSubCat,addType,allCategories, getSub } from "../controllers/product.controller.js";
+import { addCategory,addNewBrand,addSubCat,addType,allCategories, getBrands, getSub } from "../controllers/product.controller.js";
 import { validateToken } from "../middlewares/jwt.js";
 import { catIconUpload } from "../middlewares/multerUpload.js";
 import { addBrand } from "../services/product.js";
@@ -17,6 +17,7 @@ try{
 .post("/newtype",validateToken,addType)
 .post("/newbrand",validateToken,addNewBrand)
 .post("/getsub",getSub)
+.get("/allbrands",getBrands)
 }
 catch(e){
     console.log(e);
