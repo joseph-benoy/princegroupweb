@@ -15,10 +15,10 @@ const Product = () => {
                 </Col>
             </Row>
             <Row className="product-btn-row">
-                <Col xs={12} lg={6}>
+                <Col xs={12} lg={12}>
                     <Button variant="danger" onClick={()=>{setAdd(true)}}><FileEarmarkPlus/>&nbsp;&nbsp;Add new product</Button>
                 </Col>
-                <Col xs={12} lg={6}>
+                <Col xs={12} lg={12}>
                     <Button variant="danger"><Archive/>&nbsp;&nbsp;Delete product</Button>
                 </Col>
             </Row>

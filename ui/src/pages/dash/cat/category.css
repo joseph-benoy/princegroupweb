@@ -1,3 +1,25 @@
 .cat-modal{
     margin-left: 15rem !important;
 }
+#catAlert{
+    margin-top: 5rem !important;
+}
+.cat-h{
+    margin-bottom: 2rem !important;
+}
+.catBtn{
+    width: 10rem !important;
+    display: block;
+    margin-bottom: 2rem !important;
+    margin-left: 34rem !important;
+}
+@media only screen and (max-width: 600px) {
+    .cat-modal{
+        margin-left: 0rem !important;
+    }
+    .catBtn{
+        width: 10rem !important;
+        margin: 1rem 0rem !important;
+        margin-left: 2.5rem !important;
+    }
+  }

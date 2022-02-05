@@ -10,8 +10,26 @@ export const listAllCategories = async()=>{
 }
 
 export const addSub = (name,cid)=>{
-    return models.SUB_CATEGORY.create({
-        NAME:name,
-        CATEGORY_ID:cid
-    })
+    try{
+        return models.SUB_CATEGORY.create({
+            NAME:name,
+            CATEGORY_ID:cid
+        })
+    }
+    catch(e){
+        return e;
+    }
+}
+
+export const listSub = async(cid)=>{
+    try{
+        return await models.SUB_CATEGORY.findAll({
+            where:{
+                CATEGORY_ID:cid
+            }
+        });
+    }
+    catch(e){
+        return e;
+    }
 }
