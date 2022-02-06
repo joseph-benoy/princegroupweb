@@ -19,7 +19,7 @@ const NavList = () => {
         <NavDropdownMenu title="Products" id="navbarScrollingDropdown">
             {
                 menu.map((cat)=>(
-                    <DropdownSubmenu className="dm" title={<span><img className="drop-icon" src={"static/category_icons/"+cat.icon}/>&nbsp;&nbsp;{cat.main}</span>} id="collasible-nav-dropdown" alignRight={true}>
+                    <DropdownSubmenu className="dm" title={<span><img className="drop-icon" src={"/static/category_icons/"+cat.icon}/>&nbsp;&nbsp;{cat.main}</span>} id="collasible-nav-dropdown" alignRight={true}>
                         {
                             cat.sub.map((subCat)=>(
                                 <DropdownSubmenu title={subCat.sub} className="dm">

@@ -1,0 +1,45 @@
+.item-title{
+    font-family: var(--bFont);
+    color: rgba(0,0,0,0.7);
+    margin: 2rem !important;
+}
+.item-image{
+    width: 75% !important;
+}
+.item-name{
+    font-family: var(--hFont);
+}
+.item-price{
+    font-family: var(--bFont);
+    
+}
+.item-brand{
+    font-family: var(--bFont);
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+}
+.item-desc{
+    font-family: var(--bFont);
+    color: rgba(0,0,0,0.5);
+    font-size: 1.1rem;
+}
+.item-share{
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    font-size: 1.5rem !important;
+    padding: 0.3rem 0.8rem !important;
+}
+.item-share:hover{
+    background-color: var(--btnColor);
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+.item-wrap{
+    padding: 3rem !important;
+}
+.item-wrap *{
+    margin-bottom: 0.5rem !important;
+}

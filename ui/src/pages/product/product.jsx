@@ -14,7 +14,6 @@ const Product = () => {
     const [productList,setProductList] = useState([])
     useEffect(
         ()=>{
-            console.log(category)
             const data = qs.stringify({
                 'name':category
               });
@@ -29,7 +28,6 @@ const Product = () => {
             axios(config)
             .then((res)=>{
                 setProductList(res.data)
-                console.log(res.data)
             })
         },[category])
     return ( 
@@ -44,11 +42,12 @@ const Product = () => {
                     </Col>
                     <Col lg={10}>
                         <h4 className="product-title">Category {">"} {category}</h4>
+                        <p className="pcount">We found {productList.length} products available for you</p>
                         <Container fluid>
                             <Row>
                                 {
                                     productList.map((item)=>(
-                                        <Pcard title={item.NAME} img={"/static/item/"+item.IMAGE_PATH} price={item.PRICE}/>
+                                        <Pcard pid={item.ID} title={item.NAME} img={"/static/item/"+item.IMAGE_PATH} price={item.PRICE}/>
                                     ))
                                 }
                             </Row>

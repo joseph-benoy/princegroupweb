@@ -2,4 +2,11 @@
     font-family: var(--hFont);
     margin:1.5rem !important;
     margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+.pcount{
+    font-family: var(--bFont);
+    margin-left: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    color: rgba(0,0,0,0.7);
 }

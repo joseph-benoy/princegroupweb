@@ -8,6 +8,9 @@ import Dash from './pages/dash/dash';
 import ScrollToTop from "react-scroll-to-top";
 import Shop from './pages/shopProduct/shop';
 import Product from './pages/product/product';
+import Item from './pages/item/item';
+import{ ScrollToTop as St} from "react-scroll-to-top";
+
 function App() {
   return (
     <Router>
@@ -19,11 +22,12 @@ function App() {
           <Route path="/admin/dashboard" element={<Dash/>}></Route>
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/category/:category" element={<Product/>}></Route>
+          <Route path="/item/:pid" element={<Item/>}></Route>
 
           
           <Route path="/shop" element={<Shop/>}></Route>
           </Routes>
-    </div>
+      </div>
     </Router>
 
 

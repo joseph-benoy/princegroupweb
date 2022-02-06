@@ -31,10 +31,8 @@ export const getProductByName = async(name)=>{
     return result;
 }
 export const getProductById =  async(id)=>{
-    const result = await models.ITEM.findOne({
-        where:{
-            ID:id
-        }
+    const result = await sequelize.query(`SELECT ITEM.ID,ITEM.NAME,ITEM.PRICE,ITEM.DESCRIPTION,ITEM.IMAGE_PATH,BRANDS.NAME AS BRAND,PRODUCT_TYPE.NAME AS TYPE,CATEGORY.NAME AS CATEGORY,SUB_CATEGORY.NAME AS SUB FROM ITEM,PRODUCT_TYPE,BRANDS,CATEGORY,SUB_CATEGORY WHERE BRANDS.ID=ITEM.BRAND_ID AND PRODUCT_TYPE.ID=ITEM.PRODUCT_ID AND SUB_CATEGORY.ID=PRODUCT_TYPE.SUBCAT_ID AND CATEGORY.ID=SUB_CATEGORY.CATEGORY_ID AND ITEM.ID=${id}`,{
+        type: QueryTypes.SELECT
     })
     return result;
 }
