@@ -93,3 +93,11 @@ export const addBrand= (name)=>{
 export const getAllItems = async()=>{
     return models.ITEM.findAll();
 }
+
+export const deleteItemById = (id)=>{
+    return models.ITEM.destroy({
+        where:{
+            ID:id
+        }
+    })
+}

@@ -6,10 +6,12 @@ import "./product.css"
 import Select from 'react-select'
 import { useEffect } from "react";
 import axios from "axios";
+import qs from 'qs'
 const Product = () => {
     const [addShow,setAdd] = useState(false);
     const [delShow,setDel] = useState(false);
     const [productList,setProd] = useState([])
+    const [did,setDid] = useState();
     const handleClose = ()=>{
         setDel(!delShow);
     }
@@ -22,9 +24,31 @@ const Product = () => {
                     {value:p.ID,label:p.NAME}
                 ))
                 setProd(temp);
+                console.log(temp)
             })
         })()
     },[delShow])
+    const deleteItem = ()=>{
+        console.log(did)
+        const data = qs.stringify({
+            'id':did
+          });
+        const config = {
+            method: 'post',
+            url: '/api/product/item/delete',
+            headers: { 
+              'Content-Type': 'application/x-www-form-urlencoded', 
+            },
+            data : data
+          };
+        axios(config)
+        .then((res)=>{
+            alert("success")
+        })
+        .catch((res)=>{
+            alert("failed")
+        })
+    }
     return ( 
         <>
             <section  className="category-tab">
@@ -33,13 +57,13 @@ const Product = () => {
                     <Modal.Title>Remove Product</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Select options={productList}/>
+                        <Select options={productList}  onChange={(e)=>{setDid(e.value)}}/>
                     </Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={deleteItem}>
                         Delete
                     </Button>
                     </Modal.Footer>
