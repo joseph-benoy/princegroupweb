@@ -17,7 +17,7 @@ export const getAllProducts = async()=>{
     return result;
 }
 export const getProductsByCategory = async(cat)=>{
-    const result = await sequelize.query(`SELECT * FROM ITEM WHERE PRODUCT_ID IN(SELECT ID FROM PRODUCT_TYPE WHERE CATEGORY_ID=${cat})`,{
+    const result = await sequelize.query(`SELECT * FROM ITEM WHERE PRODUCT_ID IN(SELECT ID FROM PRODUCT_TYPE WHERE SUBCAT_ID IN(SELECT ID FROM SUB_CATEGORY WHERE CATEGORY_ID IN (SELECT ID FROM CATEGORY WHERE NAME='${cat}')))`,{
         type: QueryTypes.SELECT
     })
     return result;

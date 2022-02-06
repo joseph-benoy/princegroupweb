@@ -27,7 +27,7 @@ export const addProductItem = (req,res)=>{
     return res.json(result)
 }
 export const productByCategory = async (req,res)=>{
-    const result = await getProductsByCategory(req.body.cid);
+    const result = await getProductsByCategory(req.body.name);
     return res.json(result);
 }
 export const productByName =async(req,res)=>{
