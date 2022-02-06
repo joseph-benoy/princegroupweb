@@ -101,3 +101,10 @@ export const deleteItemById = (id)=>{
         }
     })
 }
+
+export const getProductByType = async(type)=>{
+    const result = await sequelize.query(`SELECT * FROM ITEM WHERE PRODUCT_ID IN(SELECT ID FROM PRODUCT_TYPE WHERE NAME='${type}')`,{
+        type: QueryTypes.SELECT
+    })
+    return result;
+}

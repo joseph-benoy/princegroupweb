@@ -15,11 +15,11 @@ const Type = () => {
     useEffect(
         ()=>{
             const data = qs.stringify({
-                'name':category
+                'type':type
               });
             const config = {
                 method: 'post',
-                url: '/api/product/item/category',
+                url: '/api/product/item/type',
                 headers: { 
                   'Content-Type': 'application/x-www-form-urlencoded', 
                 },
@@ -29,7 +29,7 @@ const Type = () => {
             .then((res)=>{
                 setProductList(res.data)
             })
-        },[category])
+        },[type])
     return ( 
         <>
         <header>
