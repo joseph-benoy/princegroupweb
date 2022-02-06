@@ -13,3 +13,8 @@
     color: rgba(0,0,0,0.7);
     font-size: 14px !important;
 }
+@media only screen and (max-width: 786px) {
+    .sidebar{
+        display: none !important;
+    }
+}
