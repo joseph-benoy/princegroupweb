@@ -8,6 +8,7 @@ import { useState } from "react";
 import axios from "axios";
 import qs from 'qs'
 import Pcard from "../../components/pcard/pcard";
+import "./product.css"
 const Product = () => {
     const {category} = useParams();
     const [productList,setProductList] = useState([])
@@ -42,7 +43,7 @@ const Product = () => {
                         <SideNav/>
                     </Col>
                     <Col lg={10}>
-                        <h2>Category {">"} {category}</h2>
+                        <h4 className="product-title">Category {">"} {category}</h4>
                         <Container fluid>
                             <Row>
                                 {

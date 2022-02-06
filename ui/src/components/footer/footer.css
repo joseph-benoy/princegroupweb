@@ -15,6 +15,7 @@
  .footer-area {
     padding-top: 100px;
     background-color: var(--blackColor);
+    margin-top: 5rem !important;
     /* background-image: url();
     background-position: center center;
     background-repeat: no-repeat;
