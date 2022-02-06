@@ -15,6 +15,9 @@ const Add = ({show,handleClose}) => {
     const [catList,setCatList] = useState([])
     const [subList,setSubList] = useState([])
     const [brandList,setBrandList] = useState([])
+    const [typesList,setTypeList] = useState([])
+    const [error,setError] = useState()
+    const [atype,setAtype] = useState("light")
     useState(()=>{
         (async()=>{
             let res = await axios.get("/api/category/all");
@@ -40,6 +43,52 @@ const Add = ({show,handleClose}) => {
             setSubList(res.data);
         })
     }
+    const loadTypes = (e)=>{
+        const data = qs.stringify({
+            'sid':e.target.value
+          });
+        const config = {
+            method: 'post',
+            url: '/api/category/gettype',
+            headers: { 
+              'Content-Type': 'application/x-www-form-urlencoded', 
+            },
+            data : data
+          };
+        axios(config)
+        .then((res)=>{
+            setTypeList(res.data);
+        })
+    }
+    const submitProduct = ()=>{
+        const data = new FormData();
+        data.append("name",name)
+        data.append("price",price)
+        data.append("bid",brand)
+        data.append("pid",type)
+        data.append("description",desc)
+        data.append("image",image)
+        axios({
+            method: 'post',
+            url: '/api/product/item/new',
+            data: data,
+            headers: {'Content-Type': 'multipart/form-data' }
+            })
+            .then(function (response) {
+                //handle success
+                setAtype("success")
+                setError("New category created!")
+                handleClose()
+                alert("success")
+            })
+            .catch(function (response) {
+                //handle error
+                setAtype("danger")
+                setError("failed to create category")
+                handleClose()
+                alert("failed")
+            });
+    }
     return ( 
         <Modal show={show} onHide={handleClose} size="lg" id="add">
         <Modal.Header closeButton>
@@ -50,24 +99,25 @@ const Add = ({show,handleClose}) => {
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Product title</Form.Label>
-                <Form.Control type="text" placeholder="Enter name" />
+                <Form.Control type="text" placeholder="Enter name" onChange={(e)=>{setName(e.target.value)}} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Price</Form.Label>
-                <Form.Control type="tel" placeholder="Price" />
+                <Form.Control type="tel" placeholder="Price"  onChange={(e)=>{setPrice(e.target.value)}} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Image</Form.Label>
-                <Form.Control type="file" accept="image/*" placeholder="choose image" />
+                <Form.Control type="file" accept="image/*" placeholder="choose image"  onChange={(e)=>{setImage(e.target.files[0])}} />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" placeholder="Description" />
+                <Form.Control as="textarea" placeholder="Description"  onChange={(e)=>{setDesc(e.target.value)}} />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Category</Form.Label>
                 <Form.Select onChange={(e)=>{loadSub(e)}}>
+                <option disabled selected="selected">choose</option>
                 {
                     catList.map((item)=>(
                         <option value={item.ID}>{item.NAME}</option>
@@ -77,7 +127,8 @@ const Add = ({show,handleClose}) => {
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Sub Category</Form.Label>
-                <Form.Select>
+                <Form.Select onChange={(e)=>{loadTypes(e)}}>
+                <option disabled selected="selected">choose</option>
                 {
                     subList.map((item)=>(
                         <option value={item.ID}>{item.NAME}</option>
@@ -87,13 +138,19 @@ const Add = ({show,handleClose}) => {
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Product type</Form.Label>
-                <Form.Select>
-                <option></option>
+                <Form.Select  onChange={(e)=>{setType(e.target.value)}} >
+                <option disabled selected="selected">choose</option>
+                {
+                    typesList.map((item)=>(
+                        <option value={item.ID}>{item.NAME}</option>
+                    ))
+                }
                 </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Brand</Form.Label>
-                <Form.Select>
+                <Form.Select  onChange={(e)=>{setBrand(e.target.value)}} >
+                <option disabled selected="selected">choose</option>
                 {
                     brandList.map((item)=>(
                         <option value={item.ID}>{item.NAME}</option>
@@ -122,7 +179,7 @@ const Add = ({show,handleClose}) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={submitProduct}>
             Save product
           </Button>
         </Modal.Footer>

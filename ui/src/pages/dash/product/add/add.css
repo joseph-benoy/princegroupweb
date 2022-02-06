@@ -1,3 +1,8 @@
 #add{
     margin-left: 15rem !important;
 }
+@media only screen and (max-width: 600px) {
+    #add{
+        margin-left: 0rem !important;
+    }
+}

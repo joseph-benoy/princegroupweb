@@ -43,3 +43,18 @@ export const listBrands = async()=>{
         return e;
     }
 }
+
+
+export const listTypes = async(sid)=>{
+    try{
+       
+        return await models.PRODUCT_TYPE.findAll({
+            where:{
+                SUBCAT_ID:sid
+            }
+        })
+    }
+    catch(e){
+        return e;
+    }
+}

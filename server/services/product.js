@@ -89,3 +89,7 @@ export const addBrand= (name)=>{
         NAME:name
     })
 }
+
+export const getAllItems = async()=>{
+    return models.ITEM.findAll();
+}

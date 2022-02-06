@@ -1,6 +1,6 @@
-import { addSub, insertCategory,listAllCategories, listBrands, listSub } from "../services/category.table.js";
+import { addSub, insertCategory,listAllCategories, listBrands, listSub, listTypes } from "../services/category.table.js";
 import { getProductById, getProductByName, getProductsByCategory, insertProductItem } from "../services/item.js";
-import { addBrand, addProductType, getMenu, insertProduct,listAllProducts } from "../services/product.js";
+import { addBrand, addProductType, getAllItems, getMenu, insertProduct,listAllProducts } from "../services/product.js";
 export const addCategory = (req,res)=>{
     const result = insertCategory(req.body.name,req.file.filename);
     return res.json(result); 
@@ -63,5 +63,15 @@ export const getSub = async(req,res)=>{
 
 export const getBrands = async(req,res)=>{
     const result = await listBrands();
+    return res.json(result)
+}
+
+export const getTypes = async(req,res)=>{
+    const result = await listTypes(req.body.sid);
+    return res.json(result)
+}
+
+export const getItems = async(req,res)=>{
+    const result = await getAllItems();
     return res.json(result)
 }
