@@ -31,7 +31,7 @@
 }
 
 @media only screen and (max-width: 769px) {
-    .about-content {
+  .about-content {
         padding-left: 0 !important;
         padding-right: 0 !important;
         margin-top: 25px !important;

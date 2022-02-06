@@ -20,6 +20,7 @@ const Product = () => {
             axios.get("/api/product/item/all")
             .then((res)=>{
                 const items = res.data;
+                
                 let temp = items.map((p)=>(
                     {value:p.ID,label:p.NAME}
                 ))

@@ -280,7 +280,7 @@ const Cat = () => {
                 </Button>
                 </Modal.Footer>
             </Modal>
-            <Modal show={sb} onclassName="cat-modal" size="lg" onHide={()=>{setSb(!sb)}}>
+            <Modal show={sb} className="cat-modal" size="lg" onHide={()=>{setSb(!sb)}}>
                 <Modal.Header closeButton>
                 <Modal.Title>Add Brand</Modal.Title>
                 </Modal.Header>
