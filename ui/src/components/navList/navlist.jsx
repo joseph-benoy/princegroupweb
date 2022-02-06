@@ -25,7 +25,7 @@ const NavList = () => {
                                 <DropdownSubmenu title={subCat.sub} className="dm">
                                     {
                                         subCat.types.map((type)=>(
-                                            <NavDropdown.Item className="dm" onClick={()=>{changePage("/type/"+cat.main+"/"+type)}}>{type}</NavDropdown.Item>
+                                            <NavDropdown.Item className="dm" onClick={()=>{changePage("/type/"+cat.main+"/"+subCat.sub+"/"+type)}}>{type}</NavDropdown.Item>
                                         ))
                                     }
                                 </DropdownSubmenu>

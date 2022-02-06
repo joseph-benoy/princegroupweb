@@ -6,8 +6,9 @@ import Footer from "../../components/footer/footer";
 import Header from "../../components/Header/Header";
 import qs from 'qs'
 import axios from "axios";
-import { Send } from "react-bootstrap-icons";
 import "./item.css"
+import Share from "../../components/share/share";
+
 const Item = () => {
     const {pid} = useParams();
     const [pdata,setPdata] = useState({})
@@ -49,7 +50,7 @@ const Item = () => {
                           <p className="item-price">$ {pdata.PRICE}</p>
                           <h6 className="item-brand">Brand - {pdata.BRAND}</h6>
                           <p className="item-desc">{pdata.DESCRIPTION}</p>
-                          <button className="item-share"><Send/></button>
+                          <Share url={window.location.href} text={pdata.DESCRIPTION} title={pdata.NAME}/>
                         </Col> 
                       </Row>
                     </Container>
