@@ -41,7 +41,7 @@ const Home = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col id="about">
                         <About/>
                     </Col>
                 </Row>

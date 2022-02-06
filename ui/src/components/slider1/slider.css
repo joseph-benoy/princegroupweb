@@ -24,6 +24,7 @@
     text-align: left;
 }.slider-btn{
     transform: translateX(-350%);
+    margin-top: 1rem !important;
 }
 @media only screen and (max-width: 786px) {
     .carousel-caption{
@@ -33,15 +34,16 @@
     }
     .slider-h{
         font-family: var(--hFont);
-        font-size: 2rem !important;
+        font-size: 2.1rem !important;
         text-align: left;
     }
     .slider-p{
         font-family: var(--bFont);
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         text-align: left;
     }.slider-btn{
-        transform: translateX(-70%);
+        transform: translateX(-80%);
+        margin-top: 1rem !important;
     }
     .slider-img{
         object-fit: fill !important;

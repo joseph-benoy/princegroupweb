@@ -31,3 +31,7 @@
 body{
   background-color: white !important;
 }
+.btn-primary{
+  background-color: var(--btnColor) !important;
+  border-color: var(--btnColor) !important;
+}
