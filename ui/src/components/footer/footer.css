@@ -292,3 +292,14 @@
   }
   
   /*# sourceMappingURL=footer.css.map */
+  .footer-area {
+
+    padding-left: 5rem !important;
+  }
+  @media only screen and (max-width: 769px) {
+
+    .footer-area {
+
+      padding-left: 0.5rem !important;
+    }
+  }

@@ -39,10 +39,7 @@ const Footer = () => {
                         <div className="single-footer-widget">
                             <h3>Customer service</h3>
                             <ul className="custom-links">
-                                <li><a href="profile-authentication.html">My Account</a></li>
                                 <li><a href="faq.html">FAQ's</a></li>
-                                <li><a href="cart.html">Order History</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
                                 <li><a href="terms-conditions.html">Delivery Information</a></li>
                             </ul>
                         </div>
