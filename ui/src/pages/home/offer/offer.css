@@ -6,12 +6,23 @@
     transition: 0.5s all ease-in-out;
     margin-top: 1rem !important;
 }
-.offer-img:hover {
+.offer:hover img{
+    
     transform: scale(1.1);
 }
 
 @media (max-width: 321px) {
     .offer-img {
         width: 100% !important;
+    }
+}
+@media only screen and (max-width: 769px) {
+    .offer-img{
+        width: 90% !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transition: 0.5s all ease-in-out;
+        margin-top: 1rem !important;
     }
 }

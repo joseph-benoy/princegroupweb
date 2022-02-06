@@ -4,7 +4,7 @@ const Offer = ({img}) => {
     return ( 
         <Container>
             <Row>
-                <Col>
+                <Col className="offer">
                     <img src={img} alt="offer" className="offer-img"/>
                 </Col>
             </Row>

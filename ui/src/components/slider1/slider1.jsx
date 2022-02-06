@@ -19,7 +19,7 @@ const Slider1 = () => {
                 alt="First slide"
               />
                   <Carousel.Caption>
-      <h1 className="slider-h">First slide label</h1>
+      <h1 className="slider-h">The Best Quality Organic Food</h1>
       <p className="slider-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       <Button variant="primary" className="slider-btn">Shop now</Button>
     </Carousel.Caption>

@@ -17,7 +17,15 @@
     margin-bottom: 2rem !important;
 }
 
-
+@media only screen and (max-width: 769px) {
+    .service-box{
+        font-family: var(--hFont);
+        text-align: center;
+        padding: 3rem 1rem;
+        width: 87%;
+        margin-left: 1.5rem !important;
+    }
+}
 @media (max-width: 800px) {
 
     .service-row {
