@@ -29,7 +29,6 @@ const Item = () => {
        axios(config)
        .then((res)=>{
            setPdata(res.data[0])
-           console.log(res.data[0])
        })},[pid])
     return ( 
         <>
