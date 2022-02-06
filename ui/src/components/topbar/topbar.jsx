@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { Col, Container,Row } from "react-bootstrap";
 import {Facebook, Twitter, Youtube, Instagram,Search} from 'react-bootstrap-icons';
+import { useNavigate } from "react-router-dom";
 import "./topbar.css";
 
 const Topbar = () => {
+    const nav = useNavigate()
+    const changePage = (path)=>{
+        nav(path)
+    }
+    const [term,setTerm] = useState("")
     return ( 
         <Container fluid className="top-main">
             <Row>
@@ -11,8 +18,8 @@ const Topbar = () => {
                 </Col>
                 <Col xs={12} lg={4}>
                 <form class="example">
-                    <input type="text" placeholder="Search.." name="search"/>
-                    <button type="submit"><Search/></button>
+                    <input onChange={(e)=>{setTerm(e.target.value)}} type="text" placeholder="Search.." name="search"/>
+                    <button type="button" onClick={()=>{changePage("/search/"+term)}}><Search/></button>
                     </form>
                 </Col>
                 <Col xs={12} lg={4}>

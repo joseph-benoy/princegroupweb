@@ -29,7 +29,7 @@ const Search = () => {
             .then((res)=>{
                 setProductList(res.data)
             })
-        },[type])
+        },[term])
     return ( 
         <>
         <header>
@@ -41,8 +41,7 @@ const Search = () => {
                         <SideNav/>
                     </Col>
                     <Col lg={10}>
-                        <h4 className="product-title">{category} {">"} {sub} {">"} {type}</h4>
-                        <p className="pcount">We found {productList.length} products available for you</p>
+                        <h4 className="product-title">Results for {term}</h4>
                         <Container fluid>
                             <Row>
                                 {
