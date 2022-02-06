@@ -1,9 +1,17 @@
 .home-content{
     padding: 0rem !important;
 }
+.slider-col-mob{
+    display: none !important;
+}
 @media only screen and (max-width: 786px) {
     .desktop{
         display: none !important;
     }
-
+    .slider-col-desktop{
+        display: none !important;
+    }
+    .slider-col-mob{
+        display: block !important;
+    }
 }

@@ -12,32 +12,23 @@ import Review from "./review/review";
 import { useState } from "react";
 import { useEffect } from "react";
 const Home = () => {
-    const [mob,setMob] = useState(false)
-    useEffect(()=>{
-        if(window.innerWidth<786){
-            setMob(true)
-        }
-    },[mob])
+
 
     return ( 
         <>
       <header>
         <Header/>
       </header>
-        {
-            mob?<Slider1/>:null
-        }
+        <section className="slider-col-mob">
+            <Slider1/>
+        </section>
             <Container fluid className="home-content">
                 <Row>
                     <Col lg={2} className="sidenav-col">
                         <SideNav/>
                     </Col>
-                    <Col lg={10}>
-                        {
-                                    
-                                    
-                                        !mob?<Slider1/>:null
-                    }
+                    <Col lg={10} className="slider-col-desktop">
+                    <Slider1/>
                     </Col>
                 </Row>
                 <Row>
