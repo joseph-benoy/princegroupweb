@@ -7,6 +7,7 @@ import Admin from './pages/admin/admin';
 import Dash from './pages/dash/dash';
 import ScrollToTop from "react-scroll-to-top";
 import Shop from './pages/shopProduct/shop';
+import Product from './pages/product/product';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/admin" element={<Admin/>}></Route>
           <Route path="/admin/dashboard" element={<Dash/>}></Route>
           <Route path="/home" element={<Home/>}></Route>
+          <Route path="/category/:category" element={<Product/>}></Route>
 
           
           <Route path="/shop" element={<Shop/>}></Route>

@@ -18,7 +18,7 @@ const SideNav = () => {
             <h4>Menu</h4>
             {
                 menu.map((cat)=>(
-                    <Nav.Link onClick={()=>{changePage("/category/"+cat.main)}}><img className="drop-icon" src={"static/category_icons/"+cat.icon}/>&nbsp;&nbsp;&nbsp;{cat.main}</Nav.Link>
+                    <Nav.Link onClick={()=>{changePage("/category/"+cat.main)}}><img className="drop-icon" src={"/static/category_icons/"+cat.icon}/>&nbsp;&nbsp;&nbsp;{cat.main}</Nav.Link>
                 ))
             }
         </Nav>
