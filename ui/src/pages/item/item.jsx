@@ -37,7 +37,7 @@ const Item = () => {
         </header>
         <Container fluid>
             <Row>
-                <Col>
+                <Col className="item-wrapper">
                     <h4 className="item-title"> {pdata.CATEGORY+" > "+pdata.SUB+" > "+pdata.TYPE}</h4>
                     <Container fluid>
                       <Row>

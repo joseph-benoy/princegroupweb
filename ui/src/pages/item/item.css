@@ -43,3 +43,26 @@
 .item-wrap *{
     margin-bottom: 0.5rem !important;
 }
+@media only screen and (max-width: 769px) {
+    .item-title{
+        font-family: var(--bFont);
+        color: rgba(0,0,0,0.7);
+        margin-top: -1rem !important;
+        margin-left: 0rem !important;
+    }
+    .item-wrapper div{
+        padding: 0rem !important;
+    }
+    .item-name{
+       margin-top: 2rem !important;
+    }
+    .item-image{
+        width: 100% !important;
+    }
+    .item-share{
+        margin-top: 2rem !important;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
