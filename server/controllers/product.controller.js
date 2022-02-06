@@ -1,5 +1,5 @@
 import { addSub, insertCategory,listAllCategories, listBrands, listSub, listTypes } from "../services/category.table.js";
-import { getProductById, getProductByName, getProductsByCategory, insertProductItem } from "../services/item.js";
+import { getProductById, getProductByName, getProductsByCategory, insertProductItem, searchItem } from "../services/item.js";
 import { addBrand, addProductType, deleteItemById, getAllItems, getMenu, getProductByType, insertProduct,listAllProducts } from "../services/product.js";
 export const addCategory = (req,res)=>{
     const result = insertCategory(req.body.name,req.file.filename);
@@ -82,5 +82,9 @@ export const deleteItem = async(req,res)=>{
 }
 export const productByType = async(req,res)=>{
     const result = await getProductByType(req.body.type);
+    return res.json(result);
+}
+export const search = async(req,res)=>{
+    const result = await searchItem(req.body.name);
     return res.json(result);
 }

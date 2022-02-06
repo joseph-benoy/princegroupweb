@@ -36,3 +36,11 @@ export const getProductById =  async(id)=>{
     })
     return result;
 }
+
+
+export const searchItem = async(name)=>{
+    const result = await sequelize.query(`SELECT * FROM ITEM WHERE NAME LIKE '%${name}%'`,{
+        type: QueryTypes.SELECT
+    })
+    return result;
+}

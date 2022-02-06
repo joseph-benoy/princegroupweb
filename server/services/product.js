@@ -108,3 +108,5 @@ export const getProductByType = async(type)=>{
     })
     return result;
 }
+
+

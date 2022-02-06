@@ -11,6 +11,7 @@ import Product from './pages/product/product';
 import Item from './pages/item/item';
 import{ ScrollToTop as St} from "react-scroll-to-top";
 import Type from './pages/type/type';
+import Search from './pages/search/type';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/category/:category" element={<Product/>}></Route>
           <Route path="/item/:pid" element={<Item/>}></Route>
           <Route path="/type/:category/:sub/:type" element={<Type/>}></Route>
+          <Route path="/search/:term" element={<Search/>}></Route>
 
           
           <Route path="/shop" element={<Shop/>}></Route>
