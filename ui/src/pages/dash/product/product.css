@@ -6,6 +6,10 @@
     margin-top: 2rem !important;
     width: 15rem !important;
 }
+#del{
+    margin-left: 15rem !important;
+}
+
 @media only screen and (max-width: 600px) {
     .product-btn-row button{
         margin-left: 0rem !important;
@@ -15,4 +19,8 @@
     .product-btn-row{
         margin-top: 2rem !important;
     }
+    #del{
+        margin-left: 0rem !important;
+    }
+    
   }

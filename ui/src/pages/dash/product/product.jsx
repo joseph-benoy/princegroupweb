@@ -52,7 +52,7 @@ const Product = () => {
     return ( 
         <>
             <section  className="category-tab">
-            <Modal show={delShow} onHide={handleClose}>
+            <Modal show={delShow} size='lg' onHide={handleClose} id="del">
                     <Modal.Header closeButton>
                     <Modal.Title>Remove Product</Modal.Title>
                     </Modal.Header>

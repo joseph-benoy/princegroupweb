@@ -13,13 +13,13 @@ const Header = () => {
     return ( 
       <>
       <Topbar/>
-        <Navbar bg="light"  expand="lg" >
+        <Navbar bg="light"  expand="lg" sticky="top">
           <Container fluid>
             <Navbar.Brand href="#"><img src={img}/><p  id="logo">&nbsp;&nbsp;Prince</p></Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="ms-auto my-2 my-lg-0"
+                className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100vh' }}
                 navbarScroll
               >
@@ -29,6 +29,8 @@ const Header = () => {
                 <Nav.Link onClick={()=>{changePage("/#services")}}>Services</Nav.Link>
                 <Nav.Link onClick={()=>{changePage("/contact")}}>Contact</Nav.Link>
               </Nav>
+              <Button id="catlogBtn">Catlog</Button>
+
             </Navbar.Collapse>
           </Container>
         </Navbar>

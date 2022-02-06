@@ -51,13 +51,15 @@ const Admin = () => {
     }
     return ( 
         <>
-            <header>
-            <Navbar bg="dark" expand="lg" variant="dark">
+
+        <Container fluid>
+        <header>
+            <Navbar bg="dark" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Pet shop</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
+                <Nav className="ms-auto">
                     <Nav.Link onClick={()=>nav("/home")} id="home-link-admin">Home</Nav.Link>
                 </Nav>
 
@@ -65,7 +67,6 @@ const Admin = () => {
             </Container>
             </Navbar>
         </header>
-        <Container fluid>
             <Row>
                 <Col>
                 <Form className="login-form">

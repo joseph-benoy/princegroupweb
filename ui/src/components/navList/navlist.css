@@ -1,3 +1,11 @@
 .drop-icon{
     width: 15% !important;
 }
+
+.dm *{
+    font-family: var(--bFont) !important;
+
+}
+.dm{
+    width: 15rem !important;
+}

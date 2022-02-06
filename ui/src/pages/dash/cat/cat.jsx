@@ -99,6 +99,7 @@ const Cat = () => {
             'name': ptype,
             'sid': sid 
           });
+          console.log(ptype)
           console.log(sid)
         const config = {
             method: 'post',
@@ -148,6 +149,10 @@ const Cat = () => {
             }
             )
     }
+    const t = (e)=>{
+        setSid(e.target.value)
+        console.log(e.target.value)
+    }
     return ( 
         <>
             <section className="category-tab">
@@ -191,6 +196,7 @@ const Cat = () => {
                 <Form.Group className="mb-3">
                     <Form.Label>Category</Form.Label>
                     <Form.Select onChange={(e)=>{setCid(e.target.value)}} >
+                    <option disabled selected="selected">choose</option>
                     {
                         catList.map((item)=>(
                             <option value={item.ID}>{item.NAME}</option>
@@ -241,6 +247,7 @@ const Cat = () => {
                     <Form.Group className="mb-3">
                         <Form.Label>Category</Form.Label>
                         <Form.Select onChange={(e)=>{loadSub(e);}} >
+                        <option disabled selected="selected">choose</option>
                         {
                             catList.map((item)=>(
                                 <option value={item.ID}>{item.NAME}</option>
@@ -252,10 +259,11 @@ const Cat = () => {
 
                     <Form.Group className="mb-3">
                     <Form.Label>Sub category</Form.Label>
-                    <Form.Select  onChange={(e)=>{setSid(e.target.value)}} >
+                    <Form.Select  onChange={t} >
+                    <option disabled selected="selected">choose</option>
                     {
                         sublist.map((item)=>(
-                            <option value={item.ID}>{item.NAME}</option>
+                            <option value={item.ID}  onChange={(e)=>{console.log(e);}}>{item.NAME}</option>
                         ))
                     }
                     </Form.Select>
@@ -272,7 +280,7 @@ const Cat = () => {
                 </Button>
                 </Modal.Footer>
             </Modal>
-            <Modal show={sb} onHclassName="cat-modal" size="lg" ide={()=>{setSb(!sb)}}>
+            <Modal show={sb} onclassName="cat-modal" size="lg" onHide={()=>{setSb(!sb)}}>
                 <Modal.Header closeButton>
                 <Modal.Title>Add Brand</Modal.Title>
                 </Modal.Header>
