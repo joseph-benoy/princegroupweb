@@ -12,6 +12,7 @@ import Item from './pages/item/item';
 import{ ScrollToTop as St} from "react-scroll-to-top";
 import Type from './pages/type/type';
 import Search from './pages/search/type';
+import Contact from './pages/contact/contact';
 
 function App() {
   return (
@@ -19,17 +20,15 @@ function App() {
     <div className="App">
       <ScrollToTop smooth color='#259cd8'/>
           <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/admin" element={<Admin/>}></Route>
-          <Route path="/admin/dashboard" element={<Dash/>}></Route>
-          <Route path="/home" element={<Home/>}></Route>
-          <Route path="/category/:category" element={<Product/>}></Route>
-          <Route path="/item/:pid" element={<Item/>}></Route>
-          <Route path="/type/:category/:sub/:type" element={<Type/>}></Route>
-          <Route path="/search/:term" element={<Search/>}></Route>
-
-          
-          <Route path="/shop" element={<Shop/>}></Route>
+              <Route path="/" element={<Home/>}></Route>
+              <Route path="/admin" element={<Admin/>}></Route>
+              <Route path="/admin/dashboard" element={<Dash/>}></Route>
+              <Route path="/home" element={<Home/>}></Route>
+              <Route path="/category/:category" element={<Product/>}></Route>
+              <Route path="/item/:pid" element={<Item/>}></Route>
+              <Route path="/type/:category/:sub/:type" element={<Type/>}></Route>
+              <Route path="/search/:term" element={<Search/>}></Route>          
+              <Route path="/contact" element={<Contact/>}></Route>
           </Routes>
       </div>
     </Router>

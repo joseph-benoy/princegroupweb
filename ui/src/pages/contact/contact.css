@@ -1,0 +1,114 @@
+.contact-form {
+    padding-right: 20px;
+  }
+  
+  .contact-form h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  .contact-form form label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .contact-form form .form-check {
+    color: var(--secondaryColor);
+    margin-top: 5px;
+  }
+  
+  .contact-form form .form-check .form-check-input {
+    margin-top: 0.18em;
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
+  }
+  
+  .contact-form form .form-check .form-check-input[type=checkbox] {
+    border-radius: 0;
+  }
+  
+  .contact-form form .form-check .form-check-input:checked {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+  
+  .contact-form form .form-check .form-check-input:focus {
+    border-color: var(--primaryColor);
+  }
+  
+  .contact-form form .default-btn {
+    margin-top: 5px;
+  }
+  
+  .contact-form form .help-block.with-errors {
+    color: red;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+  
+  .contact-form form #msgSubmit {
+    margin: 0;
+  }
+  
+  .contact-form form #msgSubmit.text-danger {
+    margin-top: 12px;
+  }
+  
+  .contact-form form #msgSubmit.text-success {
+    margin-top: 12px;
+  }
+  
+  .contact-info {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  
+  .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  .contact-info ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  
+  .contact-info ul li {
+    color: var(--secondaryColor);
+    margin-bottom: 13px;
+  }
+  
+  .contact-info ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contact-info ul li span {
+    font-weight: 600;
+    color: black;
+  }
+  
+  .contact-info ul li a {
+    color: var(--secondaryColor);
+  }
+  
+  .contact-info ul li a:hover {
+    color: var(--primaryColor);
+  }
+  .contact-area{
+      margin-top: 2rem !important;
+  }
+  .contact-area form{
+      font-family: var(--bFont) !important;
+  }
+  .contact-info li{
+    font-family: var(--bFont) !important;
+
+  }
