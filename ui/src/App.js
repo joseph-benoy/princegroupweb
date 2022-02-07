@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/home/home';
 import "react-bootstrap-submenu/dist/index.css";
-import {HashRouter as Router,Route,Routes} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Admin from './pages/admin/admin';
 import Dash from './pages/dash/dash';
 import ScrollToTop from "react-scroll-to-top";
