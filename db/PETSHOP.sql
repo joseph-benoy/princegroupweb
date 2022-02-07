@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 07, 2022 at 09:00 AM
--- Server version: 8.0.27-0ubuntu0.20.04.1
+-- Generation Time: Feb 07, 2022 at 09:10 PM
+-- Server version: 8.0.28-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `PET-SHOP`
+-- Database: `PETSHOP`
 --
 
 -- --------------------------------------------------------
