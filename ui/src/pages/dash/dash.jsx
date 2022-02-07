@@ -2,17 +2,19 @@ import "./dash.css"
 import {Container,Navbar,Nav,Tabs,Tab,Row,Col} from 'react-bootstrap';
 import Product from "./product/product";
 import Cat from "./cat/cat";
+import { useNavigate } from "react-router-dom";
 const Dash = () => {
+    const nav = useNavigate();
     return ( 
         <>
             <header>
             <Navbar bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/home">Prince</Navbar.Brand>
+                    <Navbar.Brand onClick={()=>{nav("/home")}}>Prince</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="/home">Log out</Nav.Link>
+                        <Nav.Link onClick={()=>{nav("/home")}}>Log out</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
