@@ -13,10 +13,10 @@ const Topbar = () => {
     return ( 
         <Container fluid className="top-main">
             <Row>
-                <Col xs={12} lg={4}>
+                <Col xs={12} lg={3}>
                     <p>FREE 5 days shipping over $99</p>
                 </Col>
-                <Col xs={12} lg={4}>
+                <Col xs={12} lg={5}>
                 <form class="example">
                     <input onChange={(e)=>{setTerm(e.target.value)}} type="text" placeholder="Search.." name="search"/>
                     <button type="button" onClick={()=>{changePage("/search/"+term)}}><Search/></button>

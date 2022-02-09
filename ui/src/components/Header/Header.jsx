@@ -28,8 +28,8 @@ const Header = () => {
                 <NavList/>
                 <Nav.Link onClick={()=>{changePage("/#services")}}>Services</Nav.Link>
                 <Nav.Link onClick={()=>{changePage("/contact")}}>Contact</Nav.Link>
-                <Nav.Link onClick={()=>{changePage("/admin")}}>Admin</Nav.Link>
               </Nav>
+              <Nav.Link onClick={()=>{changePage("/admin")}} id="loginlink">Login</Nav.Link>
               <Button id="catlogBtn">Catlog</Button>
 
             </Navbar.Collapse>

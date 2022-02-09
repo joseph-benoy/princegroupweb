@@ -18,6 +18,9 @@
     font-family: var(--hFont);
     padding: 0.5rem 3rem !important;
 }
+#loginlink{
+    color: rgba(0,0,0,0.6) !important; 
+}
 @media only screen and (max-width: 786px) {
     .navbar{
         margin-bottom: 2.5rem !important;
