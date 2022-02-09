@@ -29,10 +29,16 @@ app.use((req, res, next) => {
     res.sendFile(path.join( "build", "index.html"));
   });
 
+
+
+
+
+app.use("/*",(req,res,next)=>{
+    res.sendFile(path.join( "build", "index.html"));
+})
 app.use((err,req,res,next)=>{
     res.status(400).json({error:err});
 })
-
 
 
 
