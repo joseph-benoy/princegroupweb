@@ -39,7 +39,12 @@
     position: relative;
     font-size: 18px;
   }
-  
+  .logo img{
+    width: 50% !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   .single-footer-widget h3::before {
     left: 0;
     bottom: 0;
@@ -49,7 +54,10 @@
     position: absolute;
     background-color: var(--primaryColor);
   }
-  
+  #infocol{
+    margin-left: 10rem !important;
+    margin-right: 7.3rem !important;
+  }
   .single-footer-widget .custom-links {
     padding-left: 0;
     margin-bottom: 0 !important;
@@ -301,5 +309,9 @@
     .footer-area {
 
       padding-left: 0.5rem !important;
+    }
+    #infocol{
+      margin-left: 0rem !important;
+      margin-right: 7.3rem !important;
     }
   }
