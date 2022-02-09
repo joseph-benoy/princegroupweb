@@ -7,8 +7,7 @@ import cookieParser from "cookie-parser";
 import cors from 'cors';
 import { SliderRouter } from "./routes/slider.js";
 import path from 'path'
-
-
+const __dirname = path.resolve()
 const app = express();
 app.use(express.urlencoded({
     extended: true
@@ -26,7 +25,7 @@ app.use("/api/slider",SliderRouter);
 app.use(express.static(path.join("build")))
 
 app.use((req, res, next) => {
-    res.sendFile(path.join( "build", "index.html"));
+    res.sendFile(path.join( __dirname,"build", "index.html"));
   });
 
 
@@ -34,11 +33,9 @@ app.use((req, res, next) => {
 
 
 app.use("/*",(req,res,next)=>{
-    res.sendFile(path.join( "build", "index.html"));
+    res.sendFile(path.join( __dirname,"build", "index.html"));
 })
-app.use((err,req,res,next)=>{
-    res.status(400).json({error:err});
-})
+
 
 
 
