@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom"
 import "./admin.css"
 import axios from 'axios';
 import qs from 'qs';
+import img from "../../images/logo1.png"
 const Admin = () => {
     const nav = useNavigate();
     const [email,setEmail] = useState("");
@@ -56,7 +57,7 @@ const Admin = () => {
         <header>
             <Navbar bg="dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Pet shop</Navbar.Brand>
+            <Navbar.Brand href="#"><img id="logoimg" src={img}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
