@@ -23,7 +23,7 @@ const Home = () => {
             <Slider1/>
         </section>
             <Container fluid className="home-content">
-                <Row>
+                <Row className="grey">
                     <Col lg={2} className="sidenav-col">
                         <SideNav/>
                     </Col>

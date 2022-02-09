@@ -2,13 +2,17 @@
     width: 15rem !important;
   }
 .about-text{
-    padding: 3rem;
+    padding: 0rem;
     font-family: var(--hFont);
     text-align: center;
-    margin-left: 5rem !important;
-    text-align: center;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    margin-left: 3.6rem !important;
+    margin-top: 3rem !important;
+}
+.about-text p{
+    font-size: 1rem !important;
+}
+.about-text h3{
+  font-size: 3rem !important;
 }
 .about-wrapper{
     padding: 5rem !important;

@@ -6,7 +6,7 @@
 }
 .sidebar{
     padding: 2rem 0rem !important;
-    background-color: rgba(0,0,0,0.1);
+    width: fit-content !important;
 }
 .sidebar .nav-link{
     font-family: var(--bFont) !important;

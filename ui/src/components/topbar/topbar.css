@@ -31,13 +31,13 @@ form.example input[type=text] {
     font-size: 17px;
     border: 1px solid grey;
     float: left;
-    width: 23rem;
+    width: 26rem;
     background: white;
   }
   
   form.example button {
     float: left;
-    width: 20%;
+    width: 10%;
     padding: 7px;
     background: #2196F3;
     color: white;
@@ -74,4 +74,13 @@ form.example input[type=text] {
     .top-main p{
         text-align: center;
     }
+    form.example input[type=text] {
+        padding: 7px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 16.7rem;
+        background: white;
+        margin-left: 0.1rem !important;
+      }
   }

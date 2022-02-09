@@ -24,9 +24,8 @@ const Header = () => {
                 navbarScroll
               >
                 <Nav.Link onClick={()=>{changePage("/home")}}>Home</Nav.Link>
-                <Nav.Link onClick={()=>{changePage("/#about")}}>About</Nav.Link>
+                <Nav.Link href="/#about">About</Nav.Link>
                 <NavList/>
-                <Nav.Link onClick={()=>{changePage("/#services")}}>Services</Nav.Link>
                 <Nav.Link onClick={()=>{changePage("/contact")}}>Contact</Nav.Link>
               </Nav>
               <Nav.Link onClick={()=>{changePage("/admin")}} id="loginlink">Login</Nav.Link>

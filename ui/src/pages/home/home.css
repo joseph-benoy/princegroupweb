@@ -4,6 +4,11 @@
 .slider-col-mob{
     display: none !important;
 }
+.sidenav-col{
+}
+.grey{
+    background-color: rgba(0,0,0,0.1) !important;
+}
 @media only screen and (max-width: 786px) {
     .desktop{
         display: none !important;

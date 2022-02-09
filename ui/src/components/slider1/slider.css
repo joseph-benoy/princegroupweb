@@ -1,12 +1,12 @@
 .slider-img{
     height: 30rem !important;
-    object-fit: fill !important
+    object-fit: fill !important;
+    width: 100% !important;
 }
 .slider{
     height: 30rem !important;
     overflow: hidden !important;
-    width: 100% !important;
-    margin-left: 0.75rem !important;
+    width: 101% !important;
 }
 .carousel-caption{
     transform: translateY(-50%);
