@@ -7,7 +7,13 @@ import "./topbar.css";
 const Topbar = () => {
     const nav = useNavigate()
     const changePage = (path)=>{
-        nav(path)
+        if(term.length!==0)
+        {
+            nav(path)
+        }   
+        else{
+            document.getElementById('searchbar').style.borderColor='red';
+        }     
     }
     const [term,setTerm] = useState("")
     return ( 
@@ -18,7 +24,7 @@ const Topbar = () => {
                 </Col>
                 <Col xs={12} lg={5}>
                 <form class="example">
-                    <input onChange={(e)=>{setTerm(e.target.value)}} type="text" placeholder="Search.." name="search"/>
+                    <input id="searchbar" onChange={(e)=>{setTerm(e.target.value)}} type="text" placeholder="Search.." name="search"/>
                     <button type="button" onClick={()=>{changePage("/search/"+term)}}><Search/></button>
                     </form>
                 </Col>
