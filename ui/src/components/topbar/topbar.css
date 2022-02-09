@@ -33,14 +33,16 @@ form.example input[type=text] {
     float: left;
     width: 26rem;
     background: white;
+    border-right: none;
   }
   
   form.example button {
     float: left;
     width: 10%;
     padding: 7px;
-    background: #2196F3;
-    color: white;
+    background: none;
+    color: black;
+    border-left: none;
     font-size: 17px;
     border: 1px solid grey;
     border-left: none;
