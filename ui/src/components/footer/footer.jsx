@@ -37,6 +37,12 @@ const Footer = () => {
                         </Container>
                         
                     </Col>
+                    <Col lg={2} className="footer-links">
+                        <h4>Quick links</h4>
+                        <a href="/#about" style={{color:"white",textDecoration:"none"}}>About Us</a><br/>
+                        <a onClick={()=>{nav("admin")}}>Login</a><br/>
+                        <a onClick={()=>{nav("contact")}}>Contact Us</a>
+                    </Col>
                     <Col lg={5} className="footer-contact">
                         <h4>Contact us</h4>
                             <Row>
@@ -53,12 +59,7 @@ const Footer = () => {
                                 </Col>
                             </Row>
                     </Col>
-                    <Col lg={3} className="footer-links">
-                        <h4>Quick links</h4>
-                        <a href="/#about" style={{color:"white",textDecoration:"none"}}>About Us</a><br/>
-                        <a onClick={()=>{nav("admin")}}>Login</a><br/>
-                        <a onClick={()=>{nav("contact")}}>Contact Us</a>
-                    </Col>
+
                 </Row>
                 <Row>
                     <Col>

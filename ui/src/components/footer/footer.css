@@ -18,12 +18,14 @@
 }
 .footer-contact{
   margin-top: 3.7rem !important;
+  margin-left: 1rem !important;
 }
 .footer-mail{
   margin-top: 0.5rem !important;
 }
 .footer-links{
   margin-top: 3.7rem !important;
+  margin-left: 5rem !important;
 }
 .footer-row>div{
   margin-right: 0rem !important;
@@ -32,6 +34,7 @@
   margin-top: 2rem  !important;
   text-align: center;
   border-top: 2px solid white;
+  padding-top: 1rem !important;
 }
 @media only screen and (max-width: 769px) {
   .footer-area{
