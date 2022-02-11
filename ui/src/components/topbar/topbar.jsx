@@ -20,20 +20,18 @@ const Topbar = () => {
         <Container fluid className="top-main">
             <Row>
                 <Col xs={12} lg={3}>
-                    <p>FREE 5 days shipping over $99</p>
                 </Col>
-                <Col xs={12} lg={5}>
+                <Col xs={12} lg={6}>
                 <form class="example">
                     <input id="searchbar" onChange={(e)=>{setTerm(e.target.value)}} type="text" placeholder="Search.." name="search"/>
                     <button type="button" onClick={()=>{changePage("/search/"+term)}}><Search/></button>
                     </form>
                 </Col>
-                <Col xs={12} lg={4}>
+                <Col xs={12} lg={3}>
                     <span id="top-social">
-                    <a className="social-top" href="https://facebook.com"><Facebook/></a>
-                    <a className="social-top" href="https://twitter.com"><Twitter/></a>
-                    <a className="social-top" href="https://youtube.com"><Youtube/></a>
-                    <a className="social-top" href="https://instagram.com"><Instagram/></a>
+                    <a style={{color:"#4267B2"}}  className="social-top" href="https://facebook.com"><Facebook/></a>
+                    <a style={{color:"#FF0000"}} className="social-top" href="https://youtube.com"><Youtube/></a>
+                    <a style={{color:"#bc2a8d"}}  className="social-top" href="https://instagram.com"><Instagram/></a>
                     </span>
                 </Col>
             </Row>
