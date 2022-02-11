@@ -9,8 +9,10 @@
     padding-right: 1rem !important;
 }
 .about-text p{
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     text-align: left !important;
+    font-family: var(--bFont);
+    font-weight: bold;
 }
 .about-text h3{
   font-size: 3rem !important;
