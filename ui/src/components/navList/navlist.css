@@ -4,7 +4,8 @@
 
 .dm *{
     font-family: var(--bFont) !important;
-
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
 }
 .dm{
     width: 15rem !important;
