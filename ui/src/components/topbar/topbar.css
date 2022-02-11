@@ -78,7 +78,6 @@ form.example input[type=text] {
     form.example input[type=text] {
         padding: 7px;
         font-size: 17px;
-        border: 1px solid grey;
         float: left;
         width: 15rem;
         background: white;
