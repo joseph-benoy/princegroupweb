@@ -63,7 +63,7 @@ form.example input[type=text] {
         padding-right: 2.2rem !important;
     }
     #top-social{
-        margin-left: 1.7rem !important;
+        margin-left: 5rem !important;
         text-align: center;
     }
     #top-social a{
@@ -80,8 +80,8 @@ form.example input[type=text] {
         font-size: 17px;
         border: 1px solid grey;
         float: left;
-        width: 16.7rem;
+        width: 15rem;
         background: white;
-        margin-left: 0.1rem !important;
+        margin-left: 1.5rem !important;
       }
   }
