@@ -16,7 +16,7 @@ const Contact = () => {
                     <Col lg={2} className="sidenav-col">
                         <SideNav/>
                     </Col>
-                    <Col lg={10}>
+                    <Col lg={10} className="contact-wrapper">
                         <Container fluid>
                             <Row>
                             <div class="contact-area pt-100">
@@ -79,18 +79,7 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="contact-info">
-                            <h3>Contact Information</h3>
-                            <ul>
-                                <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>
-                                <li><span>Tech support:</span> <a href="tel:+1514312-5678">+1 (514) 312-5678</a></li>
-                                <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#b7dfd2dbdbd8f7c7d6c3d8de99d4d8da"><span class="__cf_email__" data-cfemail="c1a9a4adadae81b1a0b5aea8efa2aeac">[email&#160;protected]</span></a></li>
-                                <li><span>Address:</span> 1523 Cook Hill Road New Haven, CT</li>
-                                <li><span>Available:</span> Monday - Friday 8:00am - 8:00pm</li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ const Header = () => {
       <Topbar/>
         <Navbar bg="light"  expand="lg" sticky="top">
           <Container fluid>
-            <Navbar.Brand href="#"><img id="logoimg" src={img}/></Navbar.Brand>
+            <Navbar.Brand href="/home"><img id="logoimg" src={img}/></Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav

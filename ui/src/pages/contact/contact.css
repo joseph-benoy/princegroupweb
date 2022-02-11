@@ -1,7 +1,15 @@
+.contact-area{
+  margin-left: 10rem !important;
+  overflow: hidden !important;
+}
 .contact-form {
     padding-right: 20px;
+    overflow: hidden !important;
+    margin-bottom: 5rem !important;
   }
-  
+  .contact-wrapper{
+    overflow: hidden;
+  }
   .contact-form h3 {
     font-size: 20px;
     margin-bottom: 25px;

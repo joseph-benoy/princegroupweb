@@ -15,6 +15,7 @@
     text-align: left;
     font-family: var(--bFont);
     margin-top: 1.5rem !important;
+    font-weight: bold;
 }
 .pcard-container>h6{
     font-size: 1rem;
