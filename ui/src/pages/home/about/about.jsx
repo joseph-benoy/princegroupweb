@@ -1,5 +1,4 @@
 import {Button, Col, Container, Row} from 'react-bootstrap';
-import img1 from '../../../images/about/about1.jpg';
 import img2 from '../../../images/about/about2.jpg';
 import "./about.css"
 const About = () => {
@@ -10,7 +9,7 @@ const About = () => {
         <Container fluid className="about-wrapper">
             <Row>
                 <Col lg={2} className="about-col">
-                    <img src={img1} alt="prince pets" className="about-img"/>
+                    <img src={img2} alt="prince pets" className="about-img"/>
                 </Col>
                 <Col lg={10} className="about-text">
                     <h3>About Prince</h3>

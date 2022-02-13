@@ -7,11 +7,42 @@ import ReactPlayer from 'react-player';
 import { PlayCircleFill } from "react-bootstrap-icons";
 import oimg12 from "../../../images/offer/offer12.jpg";
 import oimg13 from "../../../images/offer/offer13.jpg";
-
+import oimg14 from "../../../images/offer/offer14.jpg"
 
 const Review = () => {
     return ( 
         <Container className="review-wrapper">
+                        <Row id="pt">
+            <div className="offer-area pb-75">
+            <div>
+                <div className="row justify-content-center">
+                    <div className="col-lg-4 col-md-6">
+                        <div className="single-offer-box">
+                            <a href="shop-grid.html" className="d-block">
+
+                                <img  src={oimg12} alt="offer-image" />
+
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <div className="single-offer-box">
+                            <a href="shop-grid.html" className="d-block">
+                            <img src={oimg13} alt="offer-image" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <div className="single-offer-box">
+                            <a href="shop-grid.html" className="d-block">
+                            <img src={oimg14} alt="offer-image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </Row>
             <Row>
                 <Col>
                     <h2>What Our Client Says</h2>
@@ -44,7 +75,7 @@ const Review = () => {
                 <ReactPlayer
                     url="https://vimeo.com/243556536"
                     width="100%"
-                    height="20rem"
+                    height="25rem"
                     playing
                     playIcon={<PlayCircleFill style={{fontSize:"5rem",color:"var(--btnColor)",backgroundColor:"white",borderRadius:"100px"}}/>}
                     light={video}
@@ -53,30 +84,7 @@ const Review = () => {
             </Row>
 
                             {/* Changed */}
-            <Row id="pt">
-            <div className="offer-area pb-75">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-6">
-                        <div className="single-offer-box">
-                            <a href="shop-grid.html" className="d-block">
 
-                                <img  src={oimg12} alt="offer-image" />
-
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="single-offer-box">
-                            <a href="shop-grid.html" className="d-block">
-                            <img src={oimg13} alt="offer-image" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            </Row>
         </Container>
      );
 }

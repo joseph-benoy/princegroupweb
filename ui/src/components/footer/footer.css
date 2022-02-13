@@ -3,6 +3,7 @@
   color: white;
   font-family: var(--bFont);
   padding: 2rem 5rem !important;
+  margin-top: 5rem !important;
 }
 #footer-logo{
   width: 7rem !important;

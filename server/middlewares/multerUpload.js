@@ -83,3 +83,14 @@ export const slider2Upload = multer({
        cb(undefined, true)
     }
 })
+
+export const catlog = multer({
+    storage:multer.diskStorage({
+        destination:(req,file,cb)=>{
+            cb(null,"uploads/catlog/");
+        },
+        filename:(req,file,cb)=>{
+            cb(null,"catlog"+path.extname(file.originalname))
+        }
+    })
+})
