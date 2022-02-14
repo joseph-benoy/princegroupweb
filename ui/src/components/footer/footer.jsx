@@ -47,15 +47,15 @@ const Footer = () => {
                         <h4>Contact us</h4>
                             <Row>
                                 <Col lg={5}>
-                                    <p><TelephoneFill/>+971 –67048192</p>
+                                    <p><TelephoneFill/>&nbsp;&nbsp;&nbsp;&nbsp;+971 –67048192</p>
                                 </Col>
                                 <Col lg={5}>
-                                    <p><PhoneFill/>+971 - 521307547</p>
+                                    <p><PhoneFill/>&nbsp;&nbsp;&nbsp;&nbsp;+971 - 521307547</p>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                    <p className="footer-mail"><EnvelopeFill/>marketing@princegroupofcomapny.com</p>
+                                    <p className="footer-mail"><EnvelopeFill/>&nbsp;&nbsp;&nbsp;&nbsp;marketing@princegroupofcomapny.com</p>
                                 </Col>
                             </Row>
                     </Col>

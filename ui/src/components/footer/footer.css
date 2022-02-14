@@ -42,9 +42,16 @@
     background-color: #2a2b39;
     color: white;
     font-family: var(--bFont);
-    padding: 2rem 1rem !important;
+    padding: 2rem 1.5rem !important;
   }
   .address_inner:first-child{
     border-right:none;
+  }
+  .footer-links{
+    margin-top: 3.7rem !important;
+    margin-left: 0rem !important;
+  }
+  .footer-contact{
+    margin-left: 0rem !important;
   }
   }
