@@ -52,10 +52,11 @@
         height: 20rem !important;
     }
     .slider{
-        height: 30rem !important;
+        height: 20rem !important;
         overflow: hidden !important;
         width: 100% !important;
         margin-left: 0rem !important;
         margin-top: -5rem !important;
+        margin-bottom: 10rem !important;
     }
 }

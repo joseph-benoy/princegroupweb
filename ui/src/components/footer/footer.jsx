@@ -40,8 +40,8 @@ const Footer = () => {
                     <Col lg={2} className="footer-links">
                         <h4>Quick links</h4>
                         <a href="/#about" style={{color:"white",textDecoration:"none"}}>About Us</a><br/>
-                        <a onClick={()=>{nav("admin")}}>Login</a><br/>
-                        <a onClick={()=>{nav("contact")}}>Contact Us</a>
+                        <a onClick={()=>{nav("/admin")}}>Login</a><br/>
+                        <a onClick={()=>{nav("/contact")}}>Contact Us</a>
                     </Col>
                     <Col lg={5} className="footer-contact">
                         <h4>Contact us</h4>
@@ -55,7 +55,7 @@ const Footer = () => {
                             </Row>
                             <Row>
                                 <Col>
-                                    <p className="footer-mail"><EnvelopeFill/>&nbsp;&nbsp;&nbsp;&nbsp;marketing@princegroupofcomapny.com</p>
+                                    <p className="footer-mail" style={{ wordBreak: "break-all"}}><EnvelopeFill/>&nbsp;&nbsp;&nbsp;&nbsp;marketing@princegroupofcomapny.com</p>
                                 </Col>
                             </Row>
                     </Col>
