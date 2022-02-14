@@ -16,7 +16,37 @@
     padding-top: 2rem !important;
     margin-bottom: 2rem !important;
 }
-
+.service-row{
+    background-color: rgba(0,0,0,0.25);
+    padding: 3rem 1rem !important;
+    padding-right: 5rem !important;
+}
+.sicon{
+    color: darkorange;
+    font-size: 3rem !important;
+}
+.sbox h3{
+    margin-left: -2rem !important;
+    font-family: var(--hFont);
+}
+.sbox{
+    border-right: 3px solid darkorange;
+    width: 17rem !important;
+    padding-right: 3rem !important;
+    padding-left: 0rem !important;
+    height: 10rem !important;
+}
+.sbox p{
+    font-family: var(--bFont);
+    font-weight: bold;
+    font-size: 1rem !important;
+    text-align: left;
+    margin-left: 2rem !important;
+    margin-top: 1rem !important;
+}
+#lastsbox{
+    border: none !important;
+}
 @media only screen and (max-width: 769px) {
     .service-box{
         font-family: var(--hFont);

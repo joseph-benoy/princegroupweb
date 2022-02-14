@@ -4,34 +4,78 @@ import i2 from "../../../images/icon/icon2.png"
 import i3 from "../../../images/icon/icon3.png"
 import i4 from "../../../images/icon/icon4.png"
 import "./services.css"
+import { StarFill,Lightbulb,GearFill,HandThumbsUpFill } from "react-bootstrap-icons";
 
 const Services = () => {
     return ( 
         <Container className="services-wrapper">
             <Row  className="service-row">
                 <Col lg={3}>
-                    <div className="service-box" style={{backgroundColor:"#bfebff"}}>
-                        <img src={i1}/>
-                            <p>Best collection</p>
-                    </div>
+                    <Container fluid className={"sbox"}>
+                        <Row>
+                            <Col lg={6} >
+                                <StarFill className="sicon"/>
+                            </Col>
+                            <Col lg={6}>
+                                <h3>Quality</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                                <p>We srive to provide products of resolute quality -on time , every time
+                                </p>
+                        </Row>
+                    </Container>
                 </Col>
                 <Col lg={3} >
-                    <div className="service-box"  style={{backgroundColor:"#fed3d1"}}>
-                    <img src={i2}/>
-                            <p>Fast delivery</p>
-                    </div>
+                <Container fluid  className={"sbox"}>
+                        <Row>
+                            <Col lg={6}>
+                                <Lightbulb  className="sicon"/>
+                            </Col>
+                            <Col lg={6}>
+                                <h3>Innovaton</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                                <p>
+                                    We include innovation in our range of services
+                                </p>
+                        </Row>
+                    </Container>
                 </Col>
                 <Col lg={3}>
-                    <div className="service-box" style={{backgroundColor:"#a9d4d9"}}>
-                    <img src={i3}/>
-                            <p>24/7 customer support</p>
-                    </div>
+                <Container fluid  className={"sbox"}>
+                        <Row>
+                            <Col lg={6}>
+                                <GearFill className="sicon"/>
+                            </Col>
+                            <Col lg={6}>
+                                <h3>Integrity</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                                <p>
+All of our processes,decisions and action ultimately are driven by integrity
+                                </p>
+                        </Row>
+                    </Container>
                 </Col>
                 <Col lg={3}>
-                    <div className="service-box" style={{backgroundColor:"#fef2d1"}}>
-                    <img src={i4}/>
-                            <p>Secured payment</p>
-                    </div>
+                <Container fluid  className={"sbox"} id="lastsbox">
+                        <Row>
+                            <Col lg={6}>
+                                <HandThumbsUpFill className="sicon"/>
+                            </Col>
+                            <Col lg={6}>
+                                <h3>Accountability</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                                <p>
+                                    Reliable and adherence to discipline are keys to our excellence
+                                </p>
+                        </Row>
+                    </Container>
                 </Col>
             </Row>
         </Container>
