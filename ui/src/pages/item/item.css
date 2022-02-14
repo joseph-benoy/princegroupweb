@@ -20,7 +20,7 @@
 }
 .item-desc{
     font-family: var(--bFont);
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,1);
     font-size: 1.1rem;
 }
 .item-share{
