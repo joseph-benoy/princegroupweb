@@ -63,12 +63,6 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <div class="form-check mb-3">
-                                            <input type="checkbox" class="form-check-input" id="checkme"/>
-                                            <label class="form-check-label" for="checkme">
-                                                Accept <a href="terms-conditions.html">Terms of Services</a> and <a href="privacy-policy.html">Privacy Policy</a>
-                                            </label>
-                                        </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <Button>send&nbsp;&nbsp;<Send/></Button>
