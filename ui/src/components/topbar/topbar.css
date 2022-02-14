@@ -28,7 +28,7 @@
 form.example input[type=text] {
     padding: 7px;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 1px solid #913642;
     float: left;
     width: 26rem;
     background: white;
@@ -40,10 +40,10 @@ form.example input[type=text] {
     width: 10%;
     padding: 7px;
     background: none;
-    color: black;
+    color: #913642;
     border-left: none;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 1px solid #913642;
     border-left: none;
     cursor: pointer;
   }
