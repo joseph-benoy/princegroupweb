@@ -30,7 +30,7 @@ const Header = () => {
               </Nav>
               <Nav.Link onClick={()=>{changePage("/admin")}} id="loginlink">Login</Nav.Link>
               <Button id="shopBtn">Shop online</Button>
-              <Button id="catlogBtn">Catlog</Button>
+              <a href="/static/catlog/catlog.pdf" target="_blank"><Button id="catlogBtn" >Catlog</Button></a>
 
             </Navbar.Collapse>
           </Container>
