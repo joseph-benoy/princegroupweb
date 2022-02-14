@@ -19,11 +19,11 @@ const About = () => {
                     best quality, without unnecessarily burdening nature.
                     The health of your animal is our top priority. And with it
                     the high quality of our recipes, ingredients and
-                    sustainable products.
+                    sustainable products.<br/>
                     Our range of private label pet food is made entirely in-
                     house at the highest possible quality. Together with our
                     dedicated team, we are committed to making your pet
-                    food product a real success!
+                    food product a real success!<br/><br/>
                     We run our business focusing on the highest quality
                     standards and with great personal commitment. Our
                     customers are essential to us and we believe in long-term
