@@ -17,9 +17,6 @@ const Contact = () => {
                         <SideNav/>
                     </Col>
                     <Col lg={10} className="contact-wrapper">
-                        <Container fluid>
-                            <Row>
-                            <div class="contact-area pt-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
@@ -76,9 +73,6 @@ const Contact = () => {
 
                 </div>
             </div>
-        </div>
-                            </Row>
-                        </Container>
                     </Col>
                 </Row>
             </Container>
