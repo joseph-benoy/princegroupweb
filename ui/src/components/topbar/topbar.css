@@ -79,8 +79,8 @@ form.example input[type=text] {
         padding: 7px;
         font-size: 17px;
         float: left;
-        width: 15rem;
+        width: 12rem;
         background: white;
-        margin-left: 1.5rem !important;
+        margin-left: 2rem !important;
       }
   }
