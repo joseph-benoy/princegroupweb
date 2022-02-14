@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Container ,Row,Col, Button,Modal} from "react-bootstrap";
-import {Archive, FileEarmarkPlus, PencilSquare} from 'react-bootstrap-icons';
+import { Container ,Row,Col, Button,Modal,Form} from "react-bootstrap";
+import {Archive, FileEarmarkPlus, Journal, PencilSquare} from 'react-bootstrap-icons';
 import Add from "./add/add";
 import "./product.css"
 import Select from 'react-select'
@@ -10,8 +10,10 @@ import qs from 'qs'
 const Product = () => {
     const [addShow,setAdd] = useState(false);
     const [delShow,setDel] = useState(false);
+    const [catShow,setCat] = useState(false);
     const [productList,setProd] = useState([])
     const [did,setDid] = useState();
+    const [catlog,setCatlog] = useState();
     const handleClose = ()=>{
         setDel(!delShow);
     }
@@ -30,7 +32,6 @@ const Product = () => {
         })()
     },[delShow])
     const deleteItem = ()=>{
-        console.log(did)
         const data = qs.stringify({
             'id':did
           });
@@ -49,6 +50,27 @@ const Product = () => {
         .catch((res)=>{
             alert("failed")
         })
+    }
+    const updateCatlog = ()=>{
+        const dataF = new FormData();
+        dataF.append("catlog",catlog);
+        console.log(catlog)
+        axios({
+            method: 'post',
+            url: '/api/admin/catlog/new',
+            data: dataF,
+            headers: {'Content-Type': 'multipart/form-data' }
+            })
+            .then(function (response) {
+                //handle success
+                setCat(false)
+                alert("Updated catlog");
+            })
+            .catch(function (response) {
+                //handle error
+                setCat(false)
+                alert("Filed to upload catlog")
+            });
     }
     return ( 
         <>
@@ -69,6 +91,25 @@ const Product = () => {
                     </Button>
                     </Modal.Footer>
                 </Modal>
+                <Modal show={catShow} size='lg' onHide={()=>setCat(false)} id="del">
+                    <Modal.Header closeButton>
+                    <Modal.Title>Update catlog</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Catlog</Form.Label>
+                        <Form.Control onChange={(e)=>{setCatlog(e.target.files[0])}} type="file" placeholder="catlog" accept = "application/pdf"/>
+                    </Form.Group>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={()=>setCat(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={updateCatlog}>
+                        Update
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
             <Add show={addShow} handleClose={()=>{setAdd(!addShow)}}/>
         <Container fluid>
             <Row>
@@ -82,6 +123,9 @@ const Product = () => {
                 </Col>
                 <Col xs={12} lg={12}>
                     <Button variant="danger" onClick={()=>setDel(!delShow)}><Archive/>&nbsp;&nbsp;Delete product</Button>
+                </Col>
+                <Col xs={12} lg={12}>
+                    <Button variant="danger" onClick={()=>setCat(true)}><Journal/>&nbsp;&nbsp;Update catlog</Button>
                 </Col>
             </Row>
         </Container>
