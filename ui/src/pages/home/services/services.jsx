@@ -13,10 +13,10 @@ const Services = () => {
                 <Col lg={3}>
                     <Container fluid className={"sbox"}>
                         <Row>
-                            <Col lg={6} >
+                            <Col lg={6} xs={6}>
                                 <StarFill className="sicon"/>
                             </Col>
-                            <Col lg={6}>
+                            <Col lg={6} xs={6}>
                                 <h3>Quality</h3>
                             </Col>
                         </Row>
@@ -29,10 +29,10 @@ const Services = () => {
                 <Col lg={3} >
                 <Container fluid  className={"sbox"}>
                         <Row>
-                            <Col lg={6}>
+                            <Col lg={6}  xs={6}>
                                 <Lightbulb  className="sicon"/>
                             </Col>
-                            <Col lg={6}>
+                            <Col lg={6}  xs={6}>
                                 <h3>Innovaton</h3>
                             </Col>
                         </Row>
@@ -46,10 +46,10 @@ const Services = () => {
                 <Col lg={3}>
                 <Container fluid  className={"sbox"}>
                         <Row>
-                            <Col lg={6}>
+                            <Col lg={6}  xs={6}>
                                 <GearFill className="sicon"/>
                             </Col>
-                            <Col lg={6}>
+                            <Col lg={6}  xs={6}>
                                 <h3>Integrity</h3>
                             </Col>
                         </Row>
@@ -63,10 +63,10 @@ All of our processes,decisions and action ultimately are driven by integrity
                 <Col lg={3}>
                 <Container fluid  className={"sbox"} id="lastsbox">
                         <Row>
-                            <Col lg={6}>
+                            <Col lg={6} xs={6}>
                                 <HandThumbsUpFill className="sicon"/>
                             </Col>
-                            <Col lg={6}>
+                            <Col lg={6} xs={6}>
                                 <h3>Accountability</h3>
                             </Col>
                         </Row>

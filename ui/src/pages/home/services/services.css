@@ -17,7 +17,7 @@
     margin-bottom: 2rem !important;
 }
 .service-row{
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.2);
     padding: 3rem 1rem !important;
     padding-right: 5rem !important;
 }
@@ -52,8 +52,30 @@
         font-family: var(--hFont);
         text-align: center;
         padding: 3rem 1rem;
-        width: 87%;
+        width: 100%;
         margin-left: 1.5rem !important;
+        height: fit-content !important;
+    }
+    .sbox{
+        border-right: none;
+        border-bottom: 3px solid darkorange;
+        width: 100%!important;
+        padding: 0rem !important;
+        height: 10rem !important;
+        margin-bottom: 5rem !important;
+    }
+    .service-row{
+        background-color: rgba(0,0,0,0.2);
+        padding: 3rem 1rem !important;
+        padding-right: 2rem !important;
+    }
+    .sbox h3{
+        margin-left: -6rem !important;
+        margin-top: 1rem !important;
+        font-family: var(--hFont);
+    }
+    #lastsbox{
+        height: 30% !important;
     }
 }
 @media (max-width: 800px) {
