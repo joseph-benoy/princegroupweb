@@ -1,6 +1,6 @@
 .navbar{
     margin-bottom: 0rem !important;
-    padding: 0.3rem 4.5rem !important;
+    padding: 0.3rem 2rem !important;
     background-color: white !important;
     border-bottom: 1.5px solid rgba(0,0,0,0.1);
 }
@@ -22,6 +22,16 @@
 #catlogBtn{
     font-family: var(--hFont);
     padding: 0.5rem 3rem !important;
+    background-color: #913642 !important;
+    border: none !important;
+}
+#shopBtn{
+    font-family: var(--hFont);
+    padding: 0.5rem 3rem !important;
+    background-color: darkorange !important;
+    border: none !important;
+    margin-right: 1rem !important;
+    width: 12rem !important;
 }
 #loginlink{
     color: rgba(0,0,0,0.9) !important;
@@ -43,5 +53,21 @@
     #logoimg{
         width: 100% !important;
         margin-right: -15rem !important;
+    }
+    #catlogBtn{
+        font-family: var(--hFont);
+        padding: 0.5rem 3rem !important;
+        background-color: #913642 !important;
+        border: none !important;
+        width: 100% !important;
+        margin-top: 0.5rem !important;
+    }
+    #shopBtn{
+        font-family: var(--hFont);
+        padding: 0.5rem 3rem !important;
+        background-color: darkorange !important;
+        border: none !important;
+        margin-right: 1rem !important;
+        width: 100% !important;
     }
 }
