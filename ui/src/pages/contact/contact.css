@@ -123,3 +123,12 @@
     font-family: var(--bFont) !important;
 
   }
+  .address_wrap_contact{
+    margin-top: 5rem !important;
+    font-family: var(--bFont);
+    font-weight: bold;
+    margin-left: -1rem !important;
+  }
+  .address_wrap_contact h3{
+    font-family: var(--hFont);
+  }

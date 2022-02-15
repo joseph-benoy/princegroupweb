@@ -60,8 +60,6 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
                                         <Button>send&nbsp;&nbsp;<Send/></Button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>
@@ -70,7 +68,27 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
+                    <div className="col-lg-4 col-md-12">
+                    <Container fluid className="address_wrap_contact">
+                            <Row>
+                                <Col lg={12}  className="address_inner">
+                                    <h3>Prince group of company</h3>
+                                    <br/>
+                                    <p>
+                                    Bank Street, Rolla,<br/>
+                                    Burj Avenue Building
+                                    Sharjah –U.A. E
+                                    
+                                    P.O. Box: 10111<br/>
+                                    Industrial Area - 13
+                                    Sharjah –U.A. E
+                                    
+                                    </p>
+                                </Col>
+                            </Row>
 
+                        </Container>
+                    </div>
                 </div>
             </div>
                     </Col>
