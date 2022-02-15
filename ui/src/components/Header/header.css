@@ -7,6 +7,7 @@
 .navbar .nav-link{
     font-family: var(--hFont) !important;
     color: rgba(0,0,0,0.9) !important;
+    cursor: pointer !important;
 }
 #logo{
     font-family: var(--hFont);

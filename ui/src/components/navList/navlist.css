@@ -9,6 +9,7 @@
 }
 .dm{
     width: 15rem !important;
+    cursor: pointer !important;
 }
 @media only screen and (max-width: 769px) {
     .dm{

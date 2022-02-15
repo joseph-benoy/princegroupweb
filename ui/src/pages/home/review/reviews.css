@@ -2,10 +2,17 @@
   --transition: .5s;
 }
 
-#car-usel {
+.review-car {
   padding: 10px;
+  display: block;
+  margin-top: 3rem !important;
 }
-
+.review-car button:hover{
+  background-color: #913642 !important;
+}
+.rec-dot_active{
+  background-color: #913642 !important;
+}
 .car-item{
     font-family: var(--bFont);
     font-weight: bold;

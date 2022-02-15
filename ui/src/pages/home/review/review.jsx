@@ -49,24 +49,28 @@ const Review = () => {
                 </Col>
             </Row>
             <Row>
-                <Col lg={6}>
+                <Col lg={6} className="review-car">
                 <Carousel id="car-usel" focusOnSelect enableSwipe={true}>
                     <div className="car-item">
                     <blockquote>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially .</p>
-                        <br/><br/><p>-James Andy</p>
+                        <p></p>They are keeping the quality in pet foods,add variety of
+                            food flavours,like our loved pets
+                                                <br/><br/><p>-Hussain Mahood</p>
                     </blockquote>   
                     </div>
                     <div className="car-item">
                     <blockquote>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially .</p>
-                        <br/><br/><p>-Sarah Taylor</p>
+                        <p>
+                            The bird feeds are superb, they are maintaining the quality of products and services
+                            </p>
+                        <br/><br/><p>-Leo Daniel</p>
                     </blockquote> 
                     </div>
                     <div className="car-item">
                     <blockquote>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially .</p>
-                        <br/><br/><p>-Mark Tex</p>
+                        <p>
+                            Great services and variety of products, keeps your pet happy
+                            </p>                        <br/><br/><p>-Salam Ali</p>
                     </blockquote> 
                     </div>
                 </Carousel>

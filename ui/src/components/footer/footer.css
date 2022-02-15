@@ -27,6 +27,7 @@
 .footer-links{
   margin-top: 3.7rem !important;
   margin-left: 5rem !important;
+  cursor: pointer;
 }
 .footer-row>div{
   margin-right: 0rem !important;

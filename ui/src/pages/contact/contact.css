@@ -9,6 +9,10 @@
   .contact-wrapper{
     overflow: hidden;
   }
+  .contact-wrapper button{
+    background-color: #913642 !important;
+    border: none !important;
+  }
   .contact-form h3 {
     font-size: 20px;
     margin-bottom: 25px;
