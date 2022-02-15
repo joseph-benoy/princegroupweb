@@ -1,7 +1,7 @@
 .slider-img{
     height: 85% !important;
     object-fit: fill !important;
-    width: 100% !important;
+    width: 120% !important;
 }
 .slider{
     height: 30rem !important;
@@ -47,7 +47,7 @@
     }
     .slider-img{
         object-fit: fill !important;
-        width: auto !important;
+        width: 130% !important;
         margin-left: 0rem !important;
         height: 20rem !important;
     }
