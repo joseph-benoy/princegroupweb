@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 07, 2022 at 09:10 PM
+-- Generation Time: Feb 16, 2022 at 09:13 PM
 -- Server version: 8.0.28-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
@@ -53,17 +53,6 @@ CREATE TABLE `BRANDS` (
   `NAME` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `BRANDS`
---
-
-INSERT INTO `BRANDS` (`ID`, `NAME`) VALUES
-(2, 'KayTee'),
-(4, 'sdsfdsf'),
-(5, 'ssssssssssssssssssssssssssss'),
-(3, 'testtasrygsugjhgkjregkeg'),
-(1, 'volvo');
-
 -- --------------------------------------------------------
 
 --
@@ -104,18 +93,6 @@ CREATE TABLE `ITEM` (
   `DESCRIPTION` text NOT NULL,
   `IMAGE_PATH` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `ITEM`
---
-
-INSERT INTO `ITEM` (`ID`, `NAME`, `PRICE`, `BRAND_ID`, `PRODUCT_ID`, `DESCRIPTION`, `IMAGE_PATH`) VALUES
-(6, 'PetAg KMR formula milk', 1300, 2, 15, 'PetAg KMR Kitten Milk Replacer Powder is a formula milk powder. to replace the mother\'s milk That may be caused by an orphan cat, the mother cat doesn\'t have enough milk. or have digestive problems or the mother cat is sick', 'image1644165618498.jpg'),
-(7, 'Beaphar Lactol Kitten', 120.5, 2, 15, 'Beaphar Lactol is a substitute for mother\'s milk. to be a food that contains complete nutrients for orphaned kittens or the mother cat is unable to breastfeed From birth to 35 days and can also be used as a supplement for pregnant cats. and during breastfeeding or in a sick cat does not cause diarrhea It contains essential proteins, vitamins, minerals, taurine and fat in a balanced formula. suitable for kittens', 'image1644166274709.jpg'),
-(9, 'Zeal Pet Milk Pet Milk ', 800.3, 2, 15, 'Dogs and cats love to eat cow\'s milk. The problem is lactose digestion. in cow\'s milk \r\nZEAL® New Zealand Lactose Free Pet Milk is made with 99.5% cow\'s milk and is lactose free. make it easy to digest but still maintains the quality and delicious taste of cow\'s milk in its entirety', 'image1644166428300.jpg'),
-(10, 'AG-SCIENCE Gold Ac-Science Gold Sterilized Goat Milk Milk substitute for puppies, kittens (400ml)', 1500.3, 2, 15, 'Suitable for puppies that have just given birth to mother dogs with insufficient milk supply, mastitis, or orphaned puppies. AG-Science Goat Milk is high in protein, calcium and fat, low in lactose, similar in nutrients to dog milk. Help your puppy to be healthy, grow fast with the complete structure of the breed.\r\n\r\nIngredients: 100% goat milk\r\nPackage size: 400ml\r\n\r\nnutrition information\r\nOne serving: 1/2 can (200ml.)\r\nNumber of servings per can: 2\r\n\r\nNutritional value per serving\r\nTotal energy 130 kcal (energy from fat 80 kcal)\r\n\r\nTotal fat 9 g.\r\nSaturated fat 6 g.\r\nCholesterol 20 mg.\r\nProtein                             7 g.\r\nTotal carbohydrates 6 g.\r\nSugar                            6 g.\r\nSodium 95 mg.\r\nVitamin A (mcg RE) 70\r\nCalcium (mg) 250', 'image1644166531460.jpg'),
-(11, ' AvoDerm Senior Senior Dog Food, All Breeds, Chicken and Brown Rice Formula (2 kg, 6.8kg, 11.8kg)', 10.5, 2, 15, 'Contains avocados to help nourish the skin and coat to be beautiful, shiny, clear coat color, reduce itching. AvoDerm® Dog Food Chicken and Brown Rice Formula. Made with high quality ingredients, it contains vitamins, minerals and antioxidants. that aids in the functioning of the dog\'s immune system Contains avocados, Omega-6 to Omega-3 fatty acids in the right proportions. that helps nourish the skin and coat Conditions dry and damaged hair to be beautiful, clear coat, delicious taste. Rest assured that your dog will receive all the necessary nutrients for adult dogs of all breeds. Contains no corn, wheat, no coloring agents. Ingredients: Chicken Meat, Herring Meat, Brown Rice\r\n', 'image1644166637590.jpg'),
-(12, 'Taste of the Wild Pacific Stream', 150, 2, 15, 'Holistic Grade Dog Food made from smoked salmon Made from real meat that has been baked and then filled with vegetables and fruits. Free from various grains Make the food quality and taste good. And it contains natural antioxidants to help support the immune system for a healthy pet. and the hair is beautiful and shiny Suitable for dogs of all ages, puppies from weaning and up of all breeds. and adult dogs of all breeds ', 'image1644166749346.jpg');
 
 -- --------------------------------------------------------
 
