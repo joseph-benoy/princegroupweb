@@ -53,6 +53,7 @@ const Product = () => {
             alert("failed")
         })
     }
+    const [item,setItem] = useState({})
     const updateCatlog = ()=>{
         const dataF = new FormData();
         dataF.append("catlog",catlog);
@@ -73,6 +74,25 @@ const Product = () => {
                 setCat(false)
                 alert("Filed to upload catlog")
             });
+    }
+    const [d,setD] = useState(true)
+    const loadItem = async(e)=>{
+        try{
+            const data = qs.stringify({
+                'id':e.value
+              });
+            let res=  await axios.post("/api/product/item/id",data);
+            setItem(res.data[0]);
+
+            setD(false);
+        }
+        catch(e){
+            alert("retry!")
+        }
+
+    }
+    const updateItem = async()=>{
+        
     }
     return ( 
         <>
@@ -119,7 +139,23 @@ const Product = () => {
                     <Modal.Body>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Product</Form.Label>
-                            <Select options={productList}  onChange={(e)=>{setEid(e.value)}}/>
+                            <Select options={productList}  onChange={(e)=>loadItem(e)}/>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Title</Form.Label>
+                            <Form.Control disabled={d} value={item.NAME} placeholder="title" type="text" />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Price</Form.Label>
+                            <Form.Control disabled={d} value={item.PRICE} placeholder="price" type="text" />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control disabled={d}   value={item.DESCRIPTION} placeholder="decription" as="textarea" />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Image</Form.Label>
+                            <Form.Control disabled={d}  placeholder="image" type="file" accept="images/*" />
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
