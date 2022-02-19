@@ -25,6 +25,11 @@ const Cat = () => {
     const [sdb,setSdb] = useState(false)
     const [sdc,setSdc] = useState(false)
     const [sdd,setSdd] = useState(false)
+    const [dda,setDa] = useState()
+    const [ddb,setDb] = useState()
+    const [ddc,setDc] = useState()
+    const [ddd,setDd] = useState()
+
     const [brandList,setBrandList] = useState([])
     const [typesList,setTypeList] = useState([])
     const submitCat = ()=>{
@@ -176,6 +181,110 @@ const Cat = () => {
     }
     const t = (e)=>{
         setSid(e.target.value)
+    }
+    const deleteCat = async()=>{
+            const data = qs.stringify({
+                'id': dda,
+              });
+            const config = {
+                method: 'post',
+                url: '/api/category/delete/cat',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded', 
+                },
+                data : data
+              };
+            axios(config)
+            .then((data)=>{
+                setAtype("success")
+                setError("deleted category")
+                setSda(false)
+            })
+                .catch(function (response) {
+                    //handle error
+                    setAtype("danger")
+                    setError("failed to delete category")
+                    setSda(false)
+                }
+                )
+    }
+    const deleteSub = async()=>{
+            const data = qs.stringify({
+                'id': ddb,
+              });
+            const config = {
+                method: 'post',
+                url: '/api/category/delete/sub',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded', 
+                },
+                data : data
+              };
+            axios(config)
+            .then((data)=>{
+                setAtype("success")
+                setError("deleted sub category")
+                setSdb(false)
+            })
+                .catch(function (response) {
+                    //handle error
+                    setAtype("danger")
+                    setError("failed to delete sub category")
+                    setSdb(false)
+                }
+                )
+    }
+    const deleteType = async()=>{
+            const data = qs.stringify({
+                'id': ddc,
+              });
+            const config = {
+                method: 'post',
+                url: '/api/category/delete/type',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded', 
+                },
+                data : data
+              };
+            axios(config)
+            .then((data)=>{
+                setAtype("success")
+                setError("deleted type")
+                setSdc(false)
+            })
+                .catch(function (response) {
+                    //handle error
+                    setAtype("danger")
+                    setError("failed to delete type")
+                    setSdc(false)
+                }
+                )
+    }
+    const deleteBrand= async()=>{
+            const data = qs.stringify({
+                'id': ddd,
+              });
+            const config = {
+                method: 'post',
+                url: '/api/category/delete/brand',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded', 
+                },
+                data : data
+              };
+            axios(config)
+            .then((data)=>{
+                setAtype("success")
+                setError("deleted brand")
+                setSdd(false)
+            })
+                .catch(function (response) {
+                    //handle error
+                    setAtype("danger")
+                    setError("failed to brand")
+                    setSdd(false)
+                }
+                )
     }
     return ( 
         <>
@@ -339,7 +448,7 @@ const Cat = () => {
 
                 <Form>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword" onChange={(e)=>setDa(e.target.value)}>
                     <Form.Label>Category</Form.Label>
                     <Form.Select>
                     <option disabled selected="selected">choose</option>
@@ -357,7 +466,7 @@ const Cat = () => {
                 <Button variant="secondary" onClick={()=>{setSda(!sda)}}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={submitBrand}>
+                <Button variant="primary" onClick={deleteCat}>
                     Save Changes
                 </Button>
                 </Modal.Footer>
@@ -381,7 +490,7 @@ const Cat = () => {
                         }
                     </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword" onChange={(e)=>setDb(e.target.value)}>
                     <Form.Label>Sub-Category</Form.Label>
                     <Form.Select>
                     <option disabled selected="selected">choose</option>
@@ -399,7 +508,7 @@ const Cat = () => {
                 <Button variant="secondary" onClick={()=>{setSdb(false)}}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={submitBrand}>
+                <Button variant="primary" onClick={deleteSub}>
                     Save Changes
                 </Button>
                 </Modal.Footer>
@@ -434,7 +543,7 @@ const Cat = () => {
                     }
                     </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword"  onChange={(e)=>setDc(e.target.value)}>
                     <Form.Label>Product type</Form.Label>
                     <Form.Select>
                     <option disabled selected="selected">choose</option>
@@ -451,7 +560,7 @@ const Cat = () => {
                 <Button variant="secondary" onClick={()=>{setSdc(false)}}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={submitBrand}>
+                <Button variant="primary" onClick={deleteType}>
                     Save Changes
                 </Button>
                 </Modal.Footer>
@@ -464,7 +573,7 @@ const Cat = () => {
 
                 <Form>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword"  onChange={(e)=>setDd(e.target.value)}>
                     <Form.Label>Brand</Form.Label>
                     <Form.Select>
                         <option disabled selected="selected">choose</option>
@@ -481,7 +590,7 @@ const Cat = () => {
                 <Button variant="secondary" onClick={()=>{setSdd(!sdd)}}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={submitBrand}>
+                <Button variant="primary" onClick={deleteBrand}>
                     Save Changes
                 </Button>
                 </Modal.Footer>
