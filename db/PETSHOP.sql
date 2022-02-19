@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 16, 2022 at 09:13 PM
+-- Generation Time: Feb 19, 2022 at 04:45 PM
 -- Server version: 8.0.28-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
@@ -32,7 +32,7 @@ CREATE TABLE `ADMIN` (
   `ID` int NOT NULL,
   `NAME` varchar(50) NOT NULL,
   `EMAIL` varchar(320) NOT NULL,
-  `PASSWORD` varbinary(200) NOT NULL
+  `PASSWORD` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `ADMIN` (
 --
 
 INSERT INTO `ADMIN` (`ID`, `NAME`, `EMAIL`, `PASSWORD`) VALUES
-(1, 'Admin', 'admin@pets.com', 0x243261243130246337576e3249747274377847536933624f4c5737544f54557a7a455a3578314534672e57694c41306337572f48455a484b4f574179);
+(1, 'Admin', 'admin@pets.com', '$2b$10$vqVDCi0U3pgVvRLXtqTg7.j8ReD3G1A92qEQi8hbUDFvWeGRSArdG');
 
 -- --------------------------------------------------------
 
@@ -52,6 +52,13 @@ CREATE TABLE `BRANDS` (
   `ID` int NOT NULL,
   `NAME` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `BRANDS`
+--
+
+INSERT INTO `BRANDS` (`ID`, `NAME`) VALUES
+(9, 'test');
 
 -- --------------------------------------------------------
 
@@ -70,13 +77,8 @@ CREATE TABLE `CATEGORY` (
 --
 
 INSERT INTO `CATEGORY` (`ID`, `NAME`, `ICON_PATH`) VALUES
-(3, 'Dog', 'icon1643268223485.png'),
-(8, 'Cat', 'icon1643386226568.png'),
 (9, 'Fish & Aquarium', 'icon1644007371397.png'),
-(10, 'Bird & Poultry', 'icon1644007486221.png'),
-(11, 'Rabbit & Small pets', 'icon1644007523650.png'),
-(12, 'Reptiles', 'icon1644007545251.png'),
-(13, 'Cactus & Tiny garden', 'icon1644007567421.png');
+(10, 'Bird & Poultry', 'icon1644007486221.png');
 
 -- --------------------------------------------------------
 
@@ -111,14 +113,8 @@ CREATE TABLE `PRODUCT_TYPE` (
 --
 
 INSERT INTO `PRODUCT_TYPE` (`ID`, `NAME`, `SUBCAT_ID`) VALUES
-(1, 'Jacket Life Vest', 1),
-(5, 'Dolls', 2),
-(15, 'Milk', 10),
 (16, 'Fertilizers', 11),
-(19, 'Mirror', 20),
-(20, 'Hamster Food', 21),
-(21, 'Food & Care', 22),
-(22, 'Insecticide', 23);
+(19, 'Mirror', 20);
 
 -- --------------------------------------------------------
 
@@ -175,14 +171,8 @@ CREATE TABLE `SUB_CATEGORY` (
 --
 
 INSERT INTO `SUB_CATEGORY` (`ID`, `NAME`, `CATEGORY_ID`) VALUES
-(1, 'Apparel', 3),
-(2, 'Toys,Dolls', 3),
-(10, 'Cat Food', 8),
 (11, 'Waterplants', 9),
-(20, 'Toys', 10),
-(21, 'Hamster', 11),
-(22, 'Snake', 12),
-(23, 'Insecticide', 13);
+(20, 'Toys', 10);
 
 --
 -- Indexes for dumped tables
@@ -220,7 +210,7 @@ ALTER TABLE `ITEM`
 --
 ALTER TABLE `PRODUCT_TYPE`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `SUBCAT_ID` (`SUBCAT_ID`);
+  ADD KEY `PRODUCT_TYPE_ibfk_1` (`SUBCAT_ID`);
 
 --
 -- Indexes for table `SLIDER1`
@@ -240,7 +230,7 @@ ALTER TABLE `SLIDER2`
 ALTER TABLE `SUB_CATEGORY`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `NAME` (`NAME`),
-  ADD KEY `CATEGORY_ID` (`CATEGORY_ID`);
+  ADD KEY `SUB_CATEGORY_ibfk_1` (`CATEGORY_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -256,25 +246,25 @@ ALTER TABLE `ADMIN`
 -- AUTO_INCREMENT for table `BRANDS`
 --
 ALTER TABLE `BRANDS`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `CATEGORY`
 --
 ALTER TABLE `CATEGORY`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `ITEM`
 --
 ALTER TABLE `ITEM`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `PRODUCT_TYPE`
 --
 ALTER TABLE `PRODUCT_TYPE`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `SLIDER1`
@@ -292,7 +282,7 @@ ALTER TABLE `SLIDER2`
 -- AUTO_INCREMENT for table `SUB_CATEGORY`
 --
 ALTER TABLE `SUB_CATEGORY`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
@@ -302,20 +292,20 @@ ALTER TABLE `SUB_CATEGORY`
 -- Constraints for table `ITEM`
 --
 ALTER TABLE `ITEM`
-  ADD CONSTRAINT `fk_item_1` FOREIGN KEY (`BRAND_ID`) REFERENCES `BRANDS` (`ID`),
-  ADD CONSTRAINT `fk_item_2` FOREIGN KEY (`PRODUCT_ID`) REFERENCES `PRODUCT_TYPE` (`ID`);
+  ADD CONSTRAINT `fk_item_1` FOREIGN KEY (`BRAND_ID`) REFERENCES `BRANDS` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_item_2` FOREIGN KEY (`PRODUCT_ID`) REFERENCES `PRODUCT_TYPE` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `PRODUCT_TYPE`
 --
 ALTER TABLE `PRODUCT_TYPE`
-  ADD CONSTRAINT `PRODUCT_TYPE_ibfk_1` FOREIGN KEY (`SUBCAT_ID`) REFERENCES `SUB_CATEGORY` (`ID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `PRODUCT_TYPE_ibfk_1` FOREIGN KEY (`SUBCAT_ID`) REFERENCES `SUB_CATEGORY` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `SUB_CATEGORY`
 --
 ALTER TABLE `SUB_CATEGORY`
-  ADD CONSTRAINT `SUB_CATEGORY_ibfk_1` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `CATEGORY` (`ID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `SUB_CATEGORY_ibfk_1` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `CATEGORY` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
