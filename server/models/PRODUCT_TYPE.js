@@ -20,7 +20,8 @@ export default class PRODUCT_TYPE extends Model {
       references: {
         model: 'SUB_CATEGORY',
         key: 'ID'
-      }
+      },
+      onDelete: 'cascade'
     }
   }, {
     sequelize,

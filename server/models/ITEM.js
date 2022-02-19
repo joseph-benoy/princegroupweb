@@ -24,7 +24,8 @@ export default class ITEM extends Model {
       references: {
         model: 'BRANDS',
         key: 'ID'
-      }
+      },
+      onDelete: 'cascade'
     },
     PRODUCT_ID: {
       type: DataTypes.INTEGER,
@@ -33,6 +34,8 @@ export default class ITEM extends Model {
         model: 'PRODUCT_TYPE',
         key: 'ID'
       }
+      ,onDelete: 'cascade'
+
     },
     DESCRIPTION: {
       type: DataTypes.TEXT,

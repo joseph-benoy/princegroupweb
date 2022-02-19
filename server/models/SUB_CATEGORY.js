@@ -21,7 +21,8 @@ export default class SUB_CATEGORY extends Model {
       references: {
         model: 'CATEGORY',
         key: 'ID'
-      }
+      },
+      onDelete: 'cascade'
     }
   }, {
     sequelize,
