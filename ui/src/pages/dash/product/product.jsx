@@ -76,14 +76,22 @@ const Product = () => {
             });
     }
     const [d,setD] = useState(true)
+    const [ua,setUa]  = useState();
+    const [ub,setUb] = useState();
+    const [uc,setUc] = useState();
+    const [ud,setUd] = useState('')
     const loadItem = async(e)=>{
+        setEid(e.value);
         try{
             const data = qs.stringify({
                 'id':e.value
               });
             let res=  await axios.post("/api/product/item/id",data);
             setItem(res.data[0]);
-
+            setUa(res.data[0].NAME)
+            setUb(res.data[0].PRICE)
+            setUc(res.data[0].DESCRIPTION)
+            setUd('')
             setD(false);
         }
         catch(e){
@@ -92,7 +100,42 @@ const Product = () => {
 
     }
     const updateItem = async()=>{
-        
+        if(ud!==''){
+            try{
+                const data = new FormData();
+                data.append("id",eid);
+                data.append("title",ua);
+                data.append("price",ub)
+                data.append("description",uc);
+                data.append("image",ud)
+                await axios.post("/api/product/edit",data,{
+                    headers: {'Content-Type': 'multipart/form-data' }
+                });
+                alert("Updated the product")
+                setEdit(false)
+                window.location.reload()
+            }
+            catch(e){
+                alert("Retry! Failed to edit!")
+            }
+        }
+        else{
+            try{
+                const data1 = qs.stringify({
+                    'id':eid,
+                    "title":ua,
+                    "price":ub,
+                    "description":uc
+                  });
+                let ress = await axios.post("/api/product/edit1",data1);
+                alert("Updated the product")
+                setEdit(false)
+                window.location.reload()
+            }
+            catch(e){
+                alert("Failed to edit!")
+            }
+        }
     }
     return ( 
         <>
@@ -143,26 +186,26 @@ const Product = () => {
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Title</Form.Label>
-                            <Form.Control disabled={d} value={item.NAME} placeholder="title" type="text" />
+                            <Form.Control onChange={(e)=>setUa(e.target.value)} disabled={d} defaultValue={item.NAME} placeholder="title" type="text" />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Price</Form.Label>
-                            <Form.Control disabled={d} value={item.PRICE} placeholder="price" type="text" />
+                            <Form.Control onChange={(e)=>setUb(e.target.value)} disabled={d} defaultValue={item.PRICE} placeholder="price" type="text" />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control disabled={d}   value={item.DESCRIPTION} placeholder="decription" as="textarea" />
+                            <Form.Control onChange={(e)=>setUc(e.target.value)} disabled={d}   defaultValue={item.DESCRIPTION} placeholder="decription" as="textarea" />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Image</Form.Label>
-                            <Form.Control disabled={d}  placeholder="image" type="file" accept="images/*" />
+                            <Form.Control onChange={(e)=>setUd(e.target.files[0])} disabled={d}  placeholder="image" type="file" accept="images/*" />
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={()=>setEdit(false)}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={updateCatlog}>
+                    <Button variant="primary" onClick={updateItem}>
                         Update
                     </Button>
                     </Modal.Footer>
