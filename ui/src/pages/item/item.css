@@ -5,6 +5,7 @@
 }
 .item-image{
     width: 75% !important;
+    height: 100% !important;
 }
 .item-name{
     font-family: var(--hFont);
