@@ -10,7 +10,9 @@ const Pcard = ({img,title,price,pid}) => {
         <Col lg={4} className="pcard-container" onClick={()=>{changePage("/item/"+pid)}}>
             <img src={img} alt="product card"/>
             <h3>{title}</h3>
-            <h6>${price}</h6>
+            {
+                (price!="0")?<h6>${price}</h6>:null
+            }
         </Col>
      );
 }

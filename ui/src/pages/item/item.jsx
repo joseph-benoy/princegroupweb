@@ -46,7 +46,9 @@ const Item = () => {
                         </Col> 
                         <Col lg={6} className="item-wrap">
                           <h4  className="item-name">{pdata.NAME}</h4>  
-                          <p className="item-price">$ {pdata.PRICE}</p>
+                          {
+                            (pdata.PRICE!="0"?<p className="item-price">$ {pdata.PRICE}</p>:null)
+                          }
                           <h6 className="item-brand">Brand - {pdata.BRAND}</h6>
                           <p className="item-desc">{pdata.DESCRIPTION}</p>
                           <Share url={window.location.href} text={pdata.DESCRIPTION} title={pdata.NAME}/>
