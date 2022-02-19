@@ -359,7 +359,7 @@ const Cat = () => {
                     
                 </Modal.Body>
                 <Modal.Footer>
-                <Button variant="secondary" onClick={()=>{setSb(!sb)}}>
+                <Button variant="secondary" onClick={()=>{setSdb(false)}}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={submitBrand}>
@@ -376,6 +376,12 @@ const Cat = () => {
                 <Form>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Category</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Sub-Category</Form.Label>
                     <Form.Select>
                         <option>Choose</option>
@@ -390,7 +396,7 @@ const Cat = () => {
                 </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                <Button variant="secondary" onClick={()=>{setSdc(!sdc)}}>
+                <Button variant="secondary" onClick={()=>{setSdc(false)}}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={submitBrand}>
@@ -398,7 +404,7 @@ const Cat = () => {
                 </Button>
                 </Modal.Footer>
             </Modal>
-            <Modal show={sdd} className="cat-modal" size="lg" onHide={()=>{setSdcd(!sdd)}}>
+            <Modal show={sdd} className="cat-modal" size="lg" onHide={()=>{setSdd(!sdd)}}>
                 <Modal.Header closeButton>
                 <Modal.Title>Delete brand</Modal.Title>
                 </Modal.Header>
@@ -437,10 +443,10 @@ const Cat = () => {
                         <Button className="catBtn"  variant="danger" onClick={()=>{setSb(!sb)}}>Add Brand</Button>
                     </Col>
                     <Col lg={6} xs={4}>
-                    <Button className="catBtn" variant="danger" onClick={()=>{setSacat(!sacat)}}>Delete Category</Button>
-                        <Button className="catBtn"  variant="danger" onClick={()=>{setSsub(!ssub)}}>Delete Sub-Category</Button>
-                        <Button className="catBtn"  variant="danger" onClick={()=>setStype(!stype)}>Delete Product Type</Button>
-                        <Button className="catBtn"  variant="danger" onClick={()=>{setSb(!sb)}}>Delete Brand</Button>
+                    <Button className="catBtn" variant="danger" onClick={()=>{setSda(true)}}>Delete Category</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>{setSdb(true)}}>Delete Sub-Category</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>setSdc(true)}>Delete Product Type</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>{setSdd(true)}}>Delete Brand</Button>
                     </Col>
                 </Row>
                 <Row>
