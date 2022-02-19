@@ -25,6 +25,8 @@ const Cat = () => {
     const [sdb,setSdb] = useState(false)
     const [sdc,setSdc] = useState(false)
     const [sdd,setSdd] = useState(false)
+    const [brandList,setBrandList] = useState([])
+    const [typesList,setTypeList] = useState([])
     const submitCat = ()=>{
         const dataF = new FormData();
         dataF.append("name",catName);
@@ -74,6 +76,23 @@ const Cat = () => {
                 setSsub(false)
             });
     }
+    const loadTypes = (e)=>{
+        const data = qs.stringify({
+            'sid':e.target.value
+          });
+        const config = {
+            method: 'post',
+            url: '/api/category/gettype',
+            headers: { 
+              'Content-Type': 'application/x-www-form-urlencoded', 
+            },
+            data : data
+          };
+        axios(config)
+        .then((res)=>{
+            setTypeList(res.data);
+        })
+    }
     const loadSub =(e)=>{
         setCtemp(e.target.value)
         const data = qs.stringify({
@@ -96,6 +115,8 @@ const Cat = () => {
         (async()=>{
             let res = await axios.get("/api/category/all");
             setCatList(res.data);
+            let res1 = await axios.get("/api/category/allbrands");
+            setBrandList(res1.data);
         })()
     },[])
     const submitType = ()=>{
@@ -155,7 +176,6 @@ const Cat = () => {
     }
     const t = (e)=>{
         setSid(e.target.value)
-        console.log(e.target.value)
     }
     return ( 
         <>
@@ -322,7 +342,12 @@ const Cat = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Category</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                    <option disabled selected="selected">choose</option>
+                        {
+                            catList.map((item)=>(
+                                <option value={item.ID}>{item.NAME}</option>
+                            ))
+                        }
                     </Form.Select>
                 </Form.Group>
                 </Form>
@@ -345,18 +370,30 @@ const Cat = () => {
 
                 <Form>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword"  onChange={(e)=>{loadSub(e);}}>
                     <Form.Label>Category</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                    <option disabled selected="selected">choose</option>
+                        {
+                            catList.map((item)=>(
+                                <option value={item.ID}>{item.NAME}</option>
+                            ))
+                        }
                     </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Sub-Category</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                    <option disabled selected="selected">choose</option>
+                    {
+                        sublist.map((item)=>(
+                            <option value={item.ID}  onChange={(e)=>{console.log(e);}}>{item.NAME}</option>
+                        ))
+                    }
                     </Form.Select>
                 </Form.Group>
                 </Form>
-                    
+
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={()=>{setSdb(false)}}>
@@ -375,22 +412,37 @@ const Cat = () => {
 
                 <Form>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPassword"   onChange={(e)=>{loadSub(e);}}>
                     <Form.Label>Category</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                    <option disabled selected="selected">choose</option>
+                        {
+                            catList.map((item)=>(
+                                <option value={item.ID}>{item.NAME}</option>
+                            ))
+                        }
                     </Form.Select>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Sub-Category</Form.Label>
-                    <Form.Select>
-                        <option>Choose</option>
+                    <Form.Select  onChange={(e)=>{loadTypes(e)}}>
+                    <option disabled selected="selected">choose</option>
+                    {
+                        sublist.map((item)=>(
+                            <option value={item.ID}>{item.NAME}</option>
+                        ))
+                    }
                     </Form.Select>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Product type</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                    <option disabled selected="selected">choose</option>
+                    {
+                        typesList.map((item)=>(
+                            <option value={item.ID}>{item.NAME}</option>
+                        ))
+                    }
                     </Form.Select>
                 </Form.Group>
                 </Form>
@@ -415,7 +467,12 @@ const Cat = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Brand</Form.Label>
                     <Form.Select>
-                        <option>Choose</option>
+                        <option disabled selected="selected">choose</option>
+                        {
+                            brandList.map((item)=>(
+                                <option value={item.ID}>{item.NAME}</option>
+                            ))
+                        }
                     </Form.Select>
                 </Form.Group>
                 </Form>
