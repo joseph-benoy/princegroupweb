@@ -1,6 +1,7 @@
-import { login } from "../controllers/admin.js";
+import { login, updateLogin } from "../controllers/admin.js";
 import express from "express";
 import { catlog } from "../middlewares/multerUpload.js";
+import { validateToken } from "../middlewares/jwt.js";
 
 const router = express.Router();
 
@@ -11,4 +12,5 @@ router
         message:"catlog updated!"
     })
 })
+.post("/update",validateToken,updateLogin);
 export {router as AdminRouter}
