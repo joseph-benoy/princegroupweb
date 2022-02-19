@@ -5,9 +5,43 @@ import Cat from "./cat/cat";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./dash.css"
+import axios from "axios";
+import qs from 'qs'
 const Dash = () => {
     const nav = useNavigate();
     const [u,setU] = useState(false);
+    const [email,setEmail] = useState();
+    const [password,setPass] = useState()
+    const updateAdmin = async()=>{
+        if(email!==''&&password!==''){
+            const data = qs.stringify({
+                'email': email,
+                "password":password
+              });
+            const config = {
+                method: 'post',
+                url: '/api/admin/update',
+                headers: { 
+                  'Content-Type': 'application/x-www-form-urlencoded', 
+                },
+                data : data
+              };
+            axios(config)
+            .then((data)=>{
+                alert("updated admin! Login again!")
+                window.location.href="/home"
+
+            })
+                .catch(function (response) {
+                    //handle error
+                    alert("faied to update admin")
+                }
+                )
+        }
+        else{
+            alert("Fields can't be empty!")
+        }
+    }
     return ( 
         <>
 
@@ -35,11 +69,11 @@ const Dash = () => {
                         <Modal.Body>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>New email</Form.Label>
-                            <Form.Control type="email" placeholder="Email" />
+                            <Form.Control onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="Email" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>New Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control  onChange={(e)=>setPass(e.target.value)}  type="password" placeholder="Password" />
                         </Form.Group>
 
 
@@ -53,7 +87,7 @@ const Dash = () => {
                         <Button variant="secondary" onClick={()=>setU(false)}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={()=>setU(false)}>
+                        <Button variant="primary" onClick={updateAdmin}>
                             Save Changes
                         </Button>
                         </Modal.Footer>
