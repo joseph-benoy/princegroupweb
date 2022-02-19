@@ -9,17 +9,21 @@
 }
 .catBtn{
     width: 10rem !important;
-    display: block;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-bottom: 2rem !important;
-    margin-left: 34rem !important;
 }
 @media only screen and (max-width: 600px) {
     .cat-modal{
         margin-left: 0rem !important;
     }
     .catBtn{
-        width: 10rem !important;
+        width: 5rem !important;
         margin: 1rem 0rem !important;
-        margin-left: 2.5rem !important;
+        display: block !important;
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+        margin-bottom: 2rem !important;
     }
   }

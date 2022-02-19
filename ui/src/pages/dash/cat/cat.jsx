@@ -21,6 +21,10 @@ const Cat = () => {
     const [sid,setSid] = useState()
     const [ctemp,setCtemp] = useState()
     const [sublist,setSubList] = useState([])
+    const [sda,setSda] = useState(false)
+    const [sdb,setSdb] = useState(false)
+    const [sdc,setSdc] = useState(false)
+    const [sdd,setSdd] = useState(false)
     const submitCat = ()=>{
         const dataF = new FormData();
         dataF.append("name",catName);
@@ -304,6 +308,121 @@ const Cat = () => {
                 </Button>
                 </Modal.Footer>
             </Modal>
+
+
+
+            <Modal show={sda} className="cat-modal" size="lg" onHide={()=>{setSda(!sda)}}>
+                <Modal.Header closeButton>
+                <Modal.Title>Delete category</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+
+                <Form>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Category</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                </Form>
+                    
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={()=>{setSda(!sda)}}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={submitBrand}>
+                    Save Changes
+                </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={sdb} className="cat-modal" size="lg" onHide={()=>{setSdb(!sdb)}}>
+                <Modal.Header closeButton>
+                <Modal.Title>Delete sub-category</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+
+                <Form>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Category</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                    <Form.Label>Sub-Category</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                </Form>
+                    
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={()=>{setSb(!sb)}}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={submitBrand}>
+                    Save Changes
+                </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={sdc} className="cat-modal" size="lg" onHide={()=>{setSdc(!sdc)}}>
+                <Modal.Header closeButton>
+                <Modal.Title>Delete product type</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+
+                <Form>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Sub-Category</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Product type</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={()=>{setSdc(!sdc)}}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={submitBrand}>
+                    Save Changes
+                </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={sdd} className="cat-modal" size="lg" onHide={()=>{setSdcd(!sdd)}}>
+                <Modal.Header closeButton>
+                <Modal.Title>Delete brand</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+
+                <Form>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Brand</Form.Label>
+                    <Form.Select>
+                        <option>Choose</option>
+                    </Form.Select>
+                </Form.Group>
+                </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={()=>{setSdd(!sdd)}}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={submitBrand}>
+                    Save Changes
+                </Button>
+                </Modal.Footer>
+            </Modal>
             <Container fluid>
                 <Row>
                     <Col>
@@ -311,17 +430,17 @@ const Cat = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={12} xs={12}>
+                    <Col lg={6} xs={4}>
                         <Button className="catBtn" variant="danger" onClick={()=>{setSacat(!sacat)}}>Add Category</Button>
-                    </Col>
-                    <Col lg={12} xs={12}>
                         <Button className="catBtn"  variant="danger" onClick={()=>{setSsub(!ssub)}}>Add Sub-Category</Button>
-                    </Col>
-                    <Col lg={12} xs={12}>
                         <Button className="catBtn"  variant="danger" onClick={()=>setStype(!stype)}>Add Product Type</Button>
-                    </Col>
-                    <Col lg={12} xs={12}>
                         <Button className="catBtn"  variant="danger" onClick={()=>{setSb(!sb)}}>Add Brand</Button>
+                    </Col>
+                    <Col lg={6} xs={4}>
+                    <Button className="catBtn" variant="danger" onClick={()=>{setSacat(!sacat)}}>Delete Category</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>{setSsub(!ssub)}}>Delete Sub-Category</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>setStype(!stype)}>Delete Product Type</Button>
+                        <Button className="catBtn"  variant="danger" onClick={()=>{setSb(!sb)}}>Delete Brand</Button>
                     </Col>
                 </Row>
                 <Row>
