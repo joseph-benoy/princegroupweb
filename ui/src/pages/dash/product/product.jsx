@@ -16,6 +16,7 @@ const Product = () => {
     const [edit,setEdit] = useState(false)
     const [eid,setEid] = useState()
     const [catlog,setCatlog] = useState();
+    const [status,setStatus] = useState("");
     const handleClose = ()=>{
         setDel(!delShow);
     }
@@ -60,6 +61,7 @@ const Product = () => {
         const dataF = new FormData();
         dataF.append("catlog",catlog);
         console.log(catlog)
+        setStatus("Uploading catlog...")
         axios({
             method: 'post',
             url: '/api/admin/catlog/new',
@@ -71,11 +73,13 @@ const Product = () => {
                 setCat(false)
                 alert("Updated catlog");
                 window.location.reload()
+                setStatus("")
             })
             .catch(function (response) {
                 //handle error
                 setCat(false)
                 alert("Filed to upload catlog")
+                setStatus("")
             });
     }
     const [d,setD] = useState(true)
@@ -170,6 +174,7 @@ const Product = () => {
                     </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
+                    <h5>{status}</h5>
                     <Button variant="secondary" onClick={()=>setCat(false)}>
                         Close
                     </Button>

@@ -18,6 +18,7 @@ const Add = ({show,handleClose}) => {
     const [typesList,setTypeList] = useState([])
     const [error,setError] = useState()
     const [atype,setAtype] = useState("light")
+    const [status,setStatus] = useState("");
     useState(()=>{
         (async()=>{
             let res = await axios.get("/api/category/all");
@@ -68,6 +69,7 @@ const Add = ({show,handleClose}) => {
         data.append("pid",type)
         data.append("description",desc)
         data.append("image",image)
+        setStatus("Uploading product....")
         axios({
             method: 'post',
             url: '/api/product/item/new',
@@ -81,10 +83,12 @@ const Add = ({show,handleClose}) => {
                 handleClose()
                 alert("success")
                 window.location.reload()
+                setStatus("")
             })
             .catch(function (response) {
                 //handle error
                 setAtype("danger")
+                setStatus("")
                 setError("failed to create category")
                 handleClose()
                 alert("failed")
@@ -177,6 +181,7 @@ const Add = ({show,handleClose}) => {
 
         </Modal.Body>
         <Modal.Footer>
+            <h5>{status}</h5>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
