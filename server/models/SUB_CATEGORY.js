@@ -22,7 +22,9 @@ export default class SUB_CATEGORY extends Model {
         model: 'CATEGORY',
         key: 'ID'
       },
-      onDelete: 'cascade'
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
+  
     }
   }, {
     sequelize,

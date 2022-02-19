@@ -21,7 +21,8 @@ export default class PRODUCT_TYPE extends Model {
         model: 'SUB_CATEGORY',
         key: 'ID'
       },
-      onDelete: 'cascade'
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
     }
   }, {
     sequelize,
