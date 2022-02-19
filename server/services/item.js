@@ -1,16 +1,21 @@
 import models from "../utils/db.js";
 import { sequelize } from "../utils/db.js";
 import { QueryTypes } from "sequelize";
-export const insertProductItem = (data)=>{
-    const result = models.ITEM.create({
-        NAME:data.name,
-        PRICE:data.price,
-        BRAND_ID:data.bid,
-        PRODUCT_ID:data.pid,
-        DESCRIPTION:data.description,
-        IMAGE_PATH:data.filename
-    })
-    return result;
+export const insertProductItem =async (data)=>{
+    try{
+        const result = await models.ITEM.create({
+            NAME:data.name,
+            PRICE:data.price,
+            BRAND_ID:data.bid,
+            PRODUCT_ID:data.pid,
+            DESCRIPTION:data.description,
+            IMAGE_PATH:data.filename
+        })
+        return result;
+    }
+    catch(e){
+            return e;
+    }
 }
 export const getAllProducts = async()=>{
     const result = await  models.ITEM.findAll()
@@ -49,6 +54,17 @@ export const searchItem = async(name)=>{
 export const updateItem = async(id,title,description,price,filename)=>{
     try{
         const result = await sequelize.query(`UPDATE ITEM SET NAME='${title}',PRICE=${price},DESCRIPTION='${description}',IMAGE_PATH='${filename}' WHERE ID=${id}`,{
+            type: QueryTypes.SELECT
+        })
+        return result;
+    }
+    catch(e){
+        return e;
+    }
+}
+export const updateItem1 = async(id,title,description,price)=>{
+    try{
+        const result = await sequelize.query(`UPDATE ITEM SET NAME='${title}',PRICE=${price},DESCRIPTION='${description}' WHERE ID=${id}`,{
             type: QueryTypes.SELECT
         })
         return result;
