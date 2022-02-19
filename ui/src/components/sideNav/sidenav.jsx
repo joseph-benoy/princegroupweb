@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom"
 const SideNav = () => {
     const [menu,setMenu] = useState([]);
     useEffect(async()=>{
-        let res = await axios.get("/api/product/menu");
+        let res = await axios.get("/api/category/all");
         setMenu(res.data);
     },[]);
     const nav = useNavigate();
@@ -18,7 +18,7 @@ const SideNav = () => {
             <h4>Category</h4>
             {
                 menu.map((cat)=>(
-                    <Nav.Link onClick={()=>{changePage("/category/"+cat.main)}}><img className="drop-icon" src={"/static/category_icons/"+cat.icon}/>&nbsp;&nbsp;&nbsp;{cat.main}</Nav.Link>
+                    <Nav.Link onClick={()=>{changePage("/category/"+cat.NAME)}}><img className="drop-icon" src={"/static/category_icons/"+cat.ICON_PATH}/>&nbsp;&nbsp;&nbsp;{cat.NAME}</Nav.Link>
                 ))
             }
         </Nav>
