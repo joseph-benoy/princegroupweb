@@ -48,6 +48,8 @@ const Product = () => {
         axios(config)
         .then((res)=>{
             alert("success")
+            window.location.reload()
+
         })
         .catch((res)=>{
             alert("failed")
@@ -68,6 +70,7 @@ const Product = () => {
                 //handle success
                 setCat(false)
                 alert("Updated catlog");
+                window.location.reload()
             })
             .catch(function (response) {
                 //handle error

@@ -31,3 +31,7 @@ export const loginAdmin = async (email,password,res)=>{
         return e;
     })
 }
+
+export const updateAdmin = async({})=>{
+
+}

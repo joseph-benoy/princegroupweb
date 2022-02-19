@@ -47,6 +47,8 @@ const Cat = () => {
                 setAtype("success")
                 setError("New category created!")
                 setSacat(false)
+                window.location.reload()
+
             })
             .catch(function (response) {
                 //handle error
@@ -73,6 +75,8 @@ const Cat = () => {
             setAtype("success")
             setError("Created subcategory")
             setSsub(false)
+            window.location.reload()
+
         })
             .catch(function (response) {
                 //handle error
@@ -144,6 +148,8 @@ const Cat = () => {
             setAtype("success")
             setError("Created new product type")
             setStype(false)
+            window.location.reload()
+
         })
             .catch(function (response) {
                 //handle error
@@ -170,6 +176,8 @@ const Cat = () => {
             setAtype("success")
             setError("Created new brand")
             setSb(false)
+            window.location.reload()
+
         })
             .catch(function (response) {
                 //handle error
@@ -199,6 +207,8 @@ const Cat = () => {
                 setAtype("success")
                 setError("deleted category")
                 setSda(false)
+                window.location.reload()
+
             })
                 .catch(function (response) {
                     //handle error
@@ -225,6 +235,8 @@ const Cat = () => {
                 setAtype("success")
                 setError("deleted sub category")
                 setSdb(false)
+                window.location.reload()
+
             })
                 .catch(function (response) {
                     //handle error
@@ -251,6 +263,8 @@ const Cat = () => {
                 setAtype("success")
                 setError("deleted type")
                 setSdc(false)
+                window.location.reload()
+
             })
                 .catch(function (response) {
                     //handle error
@@ -277,6 +291,8 @@ const Cat = () => {
                 setAtype("success")
                 setError("deleted brand")
                 setSdd(false)
+                window.location.reload()
+
             })
                 .catch(function (response) {
                     //handle error

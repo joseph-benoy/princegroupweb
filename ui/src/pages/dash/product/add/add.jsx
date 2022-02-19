@@ -80,6 +80,7 @@ const Add = ({show,handleClose}) => {
                 setError("New category created!")
                 handleClose()
                 alert("success")
+                window.location.reload()
             })
             .catch(function (response) {
                 //handle error
