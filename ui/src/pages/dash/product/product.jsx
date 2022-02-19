@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container ,Row,Col, Button,Modal,Form} from "react-bootstrap";
-import {Archive, FileEarmarkPlus, Journal, PencilSquare} from 'react-bootstrap-icons';
+import {Archive, FileEarmarkPlus, Journal, PencilFill, PencilSquare} from 'react-bootstrap-icons';
 import Add from "./add/add";
 import "./product.css"
 import Select from 'react-select'
@@ -13,6 +13,8 @@ const Product = () => {
     const [catShow,setCat] = useState(false);
     const [productList,setProd] = useState([])
     const [did,setDid] = useState();
+    const [edit,setEdit] = useState(false)
+    const [eid,setEid] = useState()
     const [catlog,setCatlog] = useState();
     const handleClose = ()=>{
         setDel(!delShow);
@@ -110,6 +112,25 @@ const Product = () => {
                     </Button>
                     </Modal.Footer>
                 </Modal>
+                <Modal show={edit} size='lg' onHide={()=>setEdit(false)} id="del">
+                    <Modal.Header closeButton>
+                    <Modal.Title>Edit product</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Product</Form.Label>
+                            <Select options={productList}  onChange={(e)=>{setEid(e.value)}}/>
+                        </Form.Group>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={()=>setEdit(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={updateCatlog}>
+                        Update
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
             <Add show={addShow} handleClose={()=>{setAdd(!addShow)}}/>
         <Container fluid>
             <Row>
@@ -120,6 +141,9 @@ const Product = () => {
             <Row className="product-btn-row">
                 <Col xs={12} lg={12}>
                     <Button variant="danger" onClick={()=>{setAdd(true)}}><FileEarmarkPlus/>&nbsp;&nbsp;Add new product</Button>
+                </Col>
+                <Col xs={12} lg={12}>
+                    <Button variant="danger" onClick={()=>setEdit(true)}><PencilFill/>&nbsp;&nbsp;Edit product</Button>
                 </Col>
                 <Col xs={12} lg={12}>
                     <Button variant="danger" onClick={()=>setDel(!delShow)}><Archive/>&nbsp;&nbsp;Delete product</Button>

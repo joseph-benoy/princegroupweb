@@ -44,3 +44,16 @@ export const searchItem = async(name)=>{
     })
     return result;
 }
+
+
+export const updateItem = async(id,title,description,price,filename)=>{
+    try{
+        const result = await sequelize.query(`UPDATE ITEM SET NAME='${title}',PRICE=${price},DESCRIPTION='${description}',IMAGE_PATH='${filename}' WHERE ID=${id}`,{
+            type: QueryTypes.SELECT
+        })
+        return result;
+    }
+    catch(e){
+        return e;
+    }
+}

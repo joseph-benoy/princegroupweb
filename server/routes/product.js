@@ -1,5 +1,5 @@
 import express from "express";
-import { addProduct, addProductItem, allProduct, productByCategory, productByName,productById, menu, getItems, deleteItem, productByType, search } from "../controllers/product.controller.js";
+import { addProduct, addProductItem, allProduct, productByCategory, productByName,productById, menu, getItems, deleteItem, productByType, search, updateProduct } from "../controllers/product.controller.js";
 import { validateToken } from "../middlewares/jwt.js";
 import { ItemUpload } from "../middlewares/multerUpload.js";
 
@@ -18,5 +18,6 @@ router
 .post("/item/delete",validateToken,deleteItem)
 .post("/item/type",productByType)
 .post("/search",search)
+.post("/edit",[validateToken,ItemUpload.single('image')],updateProduct)
 
 export {router as ProductRouter}

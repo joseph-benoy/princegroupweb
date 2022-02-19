@@ -32,9 +32,6 @@ export const ItemUpload = multer({
             cb(null,file.fieldname+Date.now()+path.extname(file.originalname))
         }
     }),
-    limits: {
-        fileSize: 1000000 // 1000000 Bytes = 1 MB
-      },
       fileFilter(req, file, cb) {
         if (!file.originalname.match(/\.(png|jpg|jpeg)$/)) { 
            // upload only png and jpg format
