@@ -1,4 +1,4 @@
-import { addSub, insertCategory,listAllCategories, listBrands, listSub, listTypes } from "../services/category.table.js";
+import { addSub, deleteBrand, deleteCat, deleteSub, deleteType, insertCategory,listAllCategories, listBrands, listSub, listTypes } from "../services/category.table.js";
 import { getProductById, getProductByName, getProductsByCategory, insertProductItem, searchItem } from "../services/item.js";
 import { addBrand, addProductType, deleteItemById, getAllItems, getMenu, getProductByType, insertProduct,listAllProducts } from "../services/product.js";
 export const addCategory = (req,res)=>{
@@ -86,5 +86,23 @@ export const productByType = async(req,res)=>{
 }
 export const search = async(req,res)=>{
     const result = await searchItem(req.body.name);
+    return res.json(result);
+}
+
+
+export const deleteCategory= async (req,res)=>{
+    const result =await deleteCat(req.body.id);
+    return res.json(result);
+}
+export const deleteSubCat = async (req,res)=>{
+    const result = await deleteSub(req.body.id);
+    return res.json(result);
+}
+export const deleteProductType = async (req,res)=>{
+    const result = await deleteType(req.body.id);
+    return res.json(result);
+}
+export const deleteBrandType = async (req,res)=>{
+    const result = await deleteBrand(req.body.id);
     return res.json(result);
 }

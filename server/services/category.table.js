@@ -58,3 +58,51 @@ export const listTypes = async(sid)=>{
         return e;
     }
 }
+export const deleteCat = async(cid)=>{
+    try{
+        return await models.CATEGORY.destroy({
+            where:{
+                ID:cid
+            }
+        })
+    }
+    catch(e){
+        return e;
+    }
+}
+export const deleteSub = async(sid)=>{
+    try{
+        return await models.SUB_CATEGORY.destroy({
+            where:{
+                ID:sid
+            }
+        })
+    }
+    catch(e){
+        return e;
+    }
+}
+export const deleteType = async(tid)=>{
+    try{
+        return await models.PRODUCT_TYPE.destroy({
+            where:{
+                ID:tid
+            }
+        })
+    }
+    catch(e){
+        return e;
+    }
+}
+export const deleteBrand = async(bid)=>{
+    try{
+        return await models.BRANDS.destroy({
+            where:{
+                ID:bid
+            }
+        })
+    }
+    catch(e){
+        return e;
+    }
+}
