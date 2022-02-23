@@ -23,6 +23,7 @@
     font-family: var(--bFont);
     color: rgba(0,0,0,1);
     font-size: 1.1rem;
+    white-space: pre-wrap !important;
 }
 .item-share{
     background-color: #913642;
