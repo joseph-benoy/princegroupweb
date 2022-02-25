@@ -91,3 +91,35 @@ export const catlog = multer({
         }
     })
 })
+
+
+export const slider1 = multer({
+    storage:multer.diskStorage({
+        destination:(req,file,cb)=>{
+            cb(null,"uploads/");
+        },
+        filename:(req,file,cb)=>{
+            cb(null,"slider1"+path.extname(file.originalname))
+        }
+    })
+})
+export const slider2 = multer({
+    storage:multer.diskStorage({
+        destination:(req,file,cb)=>{
+            cb(null,"uploads/");
+        },
+        filename:(req,file,cb)=>{
+            cb(null,"slider2"+path.extname(file.originalname))
+        }
+    })
+})
+export const slider3 = multer({
+    storage:multer.diskStorage({
+        destination:(req,file,cb)=>{
+            cb(null,"uploads/");
+        },
+        filename:(req,file,cb)=>{
+            cb(null,"slider3"+path.extname(file.originalname))
+        }
+    })
+})
