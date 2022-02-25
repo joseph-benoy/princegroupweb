@@ -7,6 +7,7 @@ import { useState } from "react";
 import "./dash.css"
 import axios from "axios";
 import qs from 'qs'
+import Sliders from "./sliders/slider";
 const Dash = () => {
     const nav = useNavigate();
     const [u,setU] = useState(false);
@@ -101,6 +102,10 @@ const Dash = () => {
                             <Tab eventKey="category" title="Category">
                                 <Cat/>
                             </Tab>
+                            <Tab eventKey="slider" title="Sliders">
+                                <Sliders/>
+                            </Tab>
+                            
                         </Tabs>
                         </Col>
                     </Row>

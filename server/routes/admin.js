@@ -24,6 +24,7 @@ router
     })
 })
 .post("/slider3",[slider3.single('image'),validateToken],(req,res)=>{
+    
     return res.json({
         message:"Slider 3 updated!"
     })
