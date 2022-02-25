@@ -1,10 +1,10 @@
 .slider-img{
-    height: 85% !important;
+    height: 100% !important;
     object-fit: fill !important;
     width: 120% !important;
 }
 .slider{
-    height: 30rem !important;
+    height: 35rem !important;
     overflow: hidden !important;
     width: 101% !important;
 }

@@ -5,6 +5,7 @@
     margin-right: 1.6rem !important;
     margin-bottom: 1.6rem !important;
     border-radius: 10px;
+    cursor: pointer;
 }
 .pcard-container>img{
     width: 15rem !important;

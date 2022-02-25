@@ -1,13 +1,8 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { Button, Carousel } from "react-bootstrap";
-import axios from "axios";
+import { Carousel } from "react-bootstrap";
 import "./slider.css"
-import img1 from "../../images/hero/banner9.jpg"
-import img2 from "../../images/hero/banner10.jpg"
-import img3 from "../../images/hero/banner11.jpg"
+
 const Slider1 = () => {
-  const images = [img1,img2,img3]
+  const images = ["/static/slider1.jpg","/static/slider2.jpg","/static/slider3.jpg"]
     return ( 
         <Carousel fade className="slider">
           {
